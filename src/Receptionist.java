@@ -1,4 +1,3 @@
-package prob2;
 
 import java.util.Set;
 

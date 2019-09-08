@@ -1,4 +1,3 @@
-package prob2;
 
 public class Nurse {
 	
