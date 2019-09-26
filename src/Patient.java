@@ -3,31 +3,47 @@ import java.util.Set;
 
 public class Patient {
 
+	 // instance variables 
+	
+	 private String firstName;
+	 private String middleName;
+	 private String lastName;
+	 private int dateOfBirth;
+	 private int ssn;
+	 private String sex;
+	 private String address;
+	 private int patientId;
+	 private int appointmentDate;
 	 
-	 public String id;
-	 public String firstName;
-	 public String lastName;
-	 public String patientId;
 	 
-	 public Patient(String id, String firstname, String lastName, String patientId) {
-		 this.id = id;
-		 this.firstName=firstname;
+	
+	  // constructors
+	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, int ssn, String sex, String address, int patientId, int appointmentDate){
+		 this.firstName= firstName;
+		 this.middleName = middleName;
 		 this.lastName= lastName;
+		 this.dateOfBirth= dateOfBirth;
+		 this.ssn= ssn;
+		 this.sex =sex;
+		 this.address= address;
 		 this.patientId=patientId;
+		 this.appointmentDate= appointmentDate;
 		 
 	 }
 	 
 	 
 	 
-
+  /*
 	 private Receptionist receptionist;
 
 	 private Doctor doctor;
 
 	 private Nurse nurse;
+	  private Appointment appointment;
 	 
 	 
-	 private Appointment appointment;
+	 
+	
 
 	 OneToOne(mappedBy = "receptionist")
 	 public Receptionist getReceptionist() {
@@ -43,7 +59,7 @@ public class Patient {
 	 public Nurse getNurse() {
 		 return nurse;
 	 }
-
+  */
      public Appointment getAppointment() {
     	 return appointment;
      }
