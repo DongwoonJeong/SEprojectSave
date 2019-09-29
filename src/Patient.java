@@ -1,5 +1,4 @@
-//package prob1;
-import java.util.Scanner;
+package prob1;
 import java.util.Set;
 
 public class Patient {
@@ -15,6 +14,8 @@ public class Patient {
 	 private String address;
 	 private int patientId;
 	 private int appointmentDate;
+	 private int numOfAppointments;
+	 private List <Appointments> appointments;
 	 
 	 
 	
@@ -29,42 +30,94 @@ public class Patient {
 		 this.address= address;
 		 this.patientId=patientId;
 		 this.appointmentDate= appointmentDate;
+		 this.appointments= new ArrayList<>();
+		 
+	 }
+	 
+	 Public String getFirstName() {
+		 return firstName;
+		 
+	 }
+	 
+	 Public String getMiddleName() {
+		 return middleName;
+		 
+	 }
+	 
+	 Public String getLastName() {
+		 return lastName;
+		 
+	 }
+	 
+	 Public LocalDate getDateOfBirth() {
+		 return dateOfBirth;
+		 
+	 }
+	 Patient(String ssn) {
+		 this.ssn = ssn;
+	 }
+	 
+	 public String getSsn() {
+		 return ssn;
+		 
+	 }
+	 
+	 public String getPatientGender() {
+		 return sex;
+	 }
+	 public String getPatientAddress() {
+		 return address; 
+		 
+	 }
+	 
+	 public int getPatientId() {
+		 return patientId;
+	 }
+	 
+	 public int getPatntApptDate() {
+		 return appointmentDate;
+	 }
+	 
+	 public int getNumOfAppoints() {
+		 return appointments.size();
+	 }
+	 
+	 public void addAppointments(appointments s) {
+		 appointments.add(s);
+	 }
+	 
+	 public boolean equals(object o) {
+		 Patient i = (Patient)o;
+		 return this.ssn.equals(i.ssn);
 	 }
 	 
 	 
-	 
-  /*
+  /* 
 	 private Receptionist receptionist;
-
 	 private Doctor doctor;
-
 	 private Nurse nurse;
 	  private Appointment appointment;
 	 
 	 
 	 
 	
-
 	 OneToOne(mappedBy = "receptionist")
 	 public Receptionist getReceptionist() {
 		 return receptionist;
 	 }
-
 	 @OneToOne(mappedBy = "patient")
 	 public Doctor getDoctor() {
 		 return doctor;
 	 }
-
 	 @OneToOne(mappedBy = "nurse")
 	 public Nurse getNurse() {
 		 return nurse;
 	 }
-*/
-     
+  */
+     public Appointment getAppointment() {
+    	 return appointment;
+     }
 	public void bookAppointments() {
-		System.out.println("enter appointment date :");
-		Scanner input= new Scanner(System.in);
-		this.appointmentDate = input.nextInt();
 	}
 
 
@@ -82,7 +135,9 @@ public class Patient {
 	public void getPrescriptions() {
 	}
 
-	public String toString() {
-		return firstName+" "+lastName;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
 	}
+
 }
