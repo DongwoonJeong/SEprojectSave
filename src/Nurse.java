@@ -1,12 +1,12 @@
-package prob1;
+//package prob1;
 import java.util.Set;
 
-public class Nurse extends Patient{
+public class Nurse {
 
 	private Set<Patient> patients;
 
 	private Set<Doctor> doctors;
-
+	/*
 	@OneToMany(mappedBy = "nurse")
 	public Set<Patient> getPatient(){
 		return this.patients;
@@ -16,7 +16,7 @@ public class Nurse extends Patient{
 	public Set<Doctor> getDoctors(){
 		return this.doctors;
 	}
-
+	
    public String getPatient() {
 	     return patients;
    }
@@ -25,9 +25,9 @@ public class Nurse extends Patient{
 	   super ();
    }
 	public void monitorThePatients() {
-
+	
 	}
-
+*/
 
 	public void getPatientMedicalHistory() {
 

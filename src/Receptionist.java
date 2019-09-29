@@ -5,7 +5,7 @@ public class Receptionist {
 	private Set<Patient> patients;
 	
 	private Set<Doctor> doctor;
-	
+	/*
 	@OneToMany(mappedBy ="receptionist")
 	public Set<Doctor> getDoctor() {
 		return this.doctor;
@@ -15,7 +15,7 @@ public class Receptionist {
 	public Set<Patient> getPatients(){
 		return this.patients;
 	}
-	
+	*/
 	public void  bookAppointments() {
 	}
 	public void cancelOrChangeAppointments() {
