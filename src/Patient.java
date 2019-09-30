@@ -1,4 +1,5 @@
-package prob1;
+//package prob1;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Patient {
@@ -30,8 +31,7 @@ public class Patient {
 		 this.address= address;
 		 this.patientId=patientId;
 		 this.appointmentDate= appointmentDate;
-		 this.appointments= new ArrayList<>();
-		 
+
 	 }
 	 
 	 Public String getFirstName() {
@@ -118,11 +118,12 @@ public class Patient {
 	 public Nurse getNurse() {
 		 return nurse;
 	 }
-  */
-     public Appointment getAppointment() {
-    	 return appointment;
-     }
+*/
+     
 	public void bookAppointments() {
+		System.out.println("enter appointment date :");
+		Scanner input= new Scanner(System.in);
+		this.appointmentDate = input.nextInt();
 	}
 
 
@@ -140,9 +141,7 @@ public class Patient {
 	public void getPrescriptions() {
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public String toString() {
+		return firstName+" "+lastName;
 	}
-
 }

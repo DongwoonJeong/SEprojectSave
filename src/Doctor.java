@@ -7,7 +7,7 @@ public class Doctor {
 	private Set<Nurse> nurses;
 	
 	private Receptionist receptionist;
-	
+	/*
 	@OneToMany(mappedBy = "doctor")
 	public Set<Patient> getPatient() {
 		return this.patients;
@@ -22,7 +22,7 @@ public class Doctor {
 	public Receptionist getReceptionist() {
 		return this.receptionist;
 	}
-	
+	*/
 	public void getPrescriptions() {
 	}
     
