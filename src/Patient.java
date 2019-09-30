@@ -15,6 +15,8 @@ public class Patient {
 	 private String address;
 	 private int patientId;
 	 private int appointmentDate;
+	 private int numOfAppointments;
+	 private List <Appointments> appointments;
 	 
 	 
 	
@@ -29,11 +31,68 @@ public class Patient {
 		 this.address= address;
 		 this.patientId=patientId;
 		 this.appointmentDate= appointmentDate;
+
+	 }
+	 
+	 Public String getFirstName() {
+		 return firstName;
+		 
+	 }
+	 
+	 Public String getMiddleName() {
+		 return middleName;
+		 
+	 }
+	 
+	 Public String getLastName() {
+		 return lastName;
+		 
+	 }
+	 
+	 Public LocalDate getDateOfBirth() {
+		 return dateOfBirth;
+		 
+	 }
+	 Patient(String ssn) {
+		 this.ssn = ssn;
+	 }
+	 
+	 public String getSsn() {
+		 return ssn;
+		 
+	 }
+	 
+	 public String getPatientGender() {
+		 return sex;
+	 }
+	 public String getPatientAddress() {
+		 return address; 
+		 
+	 }
+	 
+	 public int getPatientId() {
+		 return patientId;
+	 }
+	 
+	 public int getPatntApptDate() {
+		 return appointmentDate;
+	 }
+	 
+	 public int getNumOfAppoints() {
+		 return appointments.size();
+	 }
+	 
+	 public void addAppointments(appointments s) {
+		 appointments.add(s);
+	 }
+	 
+	 public boolean equals(object o) {
+		 Patient i = (Patient)o;
+		 return this.ssn.equals(i.ssn);
 	 }
 	 
 	 
-	 
-  /*
+  /* 
 	 private Receptionist receptionist;
 
 	 private Doctor doctor;
