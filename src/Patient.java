@@ -16,11 +16,15 @@ public class Patient {
 	 private int patientId;
 	 private int appointmentDate;
 	 private int numOfAppointments;
-	 private List <Appointments> appointments;
-	 
-	 
+	 private Set<Appointment> appointment;
+	 private Set<Doctor> doctor;
+	 //private Set<Nurse> nurse;
 	
 	  // constructors
+	 public Patient(String name) {
+		 this.lastName= name;
+	 }
+	 
 	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, int ssn, String sex, String address, int patientId, int appointmentDate){
 		 this.firstName= firstName;
 		 this.middleName = middleName;
@@ -31,43 +35,37 @@ public class Patient {
 		 this.address= address;
 		 this.patientId=patientId;
 		 this.appointmentDate= appointmentDate;
-
 	 }
 	 
-	 Public String getFirstName() {
-		 return firstName;
-		 
+	 public String getFirstName() {
+		 return firstName;	 
 	 }
 	 
-	 Public String getMiddleName() {
+	 public String getMiddleName() {
 		 return middleName;
-		 
 	 }
 	 
-	 Public String getLastName() {
+	 public String getLastName() {
 		 return lastName;
-		 
 	 }
 	 
-	 Public LocalDate getDateOfBirth() {
+	 public int getDateOfBirth() {
 		 return dateOfBirth;
-		 
 	 }
-	 Patient(String ssn) {
+	 Patient(int ssn) {
 		 this.ssn = ssn;
 	 }
 	 
-	 public String getSsn() {
+	 public int getSsn() {
 		 return ssn;
-		 
 	 }
 	 
 	 public String getPatientGender() {
 		 return sex;
 	 }
+	 
 	 public String getPatientAddress() {
 		 return address; 
-		 
 	 }
 	 
 	 public int getPatientId() {
@@ -79,18 +77,34 @@ public class Patient {
 	 }
 	 
 	 public int getNumOfAppoints() {
-		 return appointments.size();
+		 return appointment.size();
 	 }
 	 
-	 public void addAppointments(appointments s) {
-		 appointments.add(s);
+	 public void addAppointments(Appointment s) {
+		 appointment.add(s);
 	 }
 	 
+	 //@ManyToMany(mappedBy = "Patient")
+	 public Set<Appointment> getAppointment(){
+		 return this.appointment;
+	 }
+	 
+	//@ManyToMany(mappedBy = "Patient")
+	 public Set<Doctor> getDoctor(){
+		 	return this.doctor;
+	 }
+	 
+	 public void setAppointment(Set<Appointment> appointment) {
+		 this.appointment = appointment;
+	 }
+	 
+	 
+	 /*
 	 public boolean equals(object o) {
 		 Patient i = (Patient)o;
 		 return this.ssn.equals(i.ssn);
 	 }
-	 
+	 */
 	 
   /* 
 	 private Receptionist receptionist;
@@ -128,17 +142,6 @@ public class Patient {
 
 
 	public void cancelorChangeAppointments() {
-	}
-
-
-	public void patientInformation() {
-	}
-	
-	public void payTheMedicalBill() {
-	}
-
-
-	public void getPrescriptions() {
 	}
 
 	public String toString() {

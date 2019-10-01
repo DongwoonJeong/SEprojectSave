@@ -1,4 +1,3 @@
-package prob1;
 import java.util.Set;
 
 public class Nurse {
