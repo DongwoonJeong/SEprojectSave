@@ -2,20 +2,36 @@ import java.util.Set;
 
 public class Receptionist {
 	
+	private String name;
+	
 	private Set<Patient> patients;
 	
-	private Set<Doctor> doctor;
-	/*
-	@OneToMany(mappedBy ="receptionist")
-	public Set<Doctor> getDoctor() {
-		return this.doctor;
+	private Set<Doctor> doctors;
+	
+	Receptionist(String name){
+		this.name = name;
 	}
 	
-	@OneToMany(mappedBy = "receptionist")
+	//@OneToMany(mappedBy ="receptionist")
+	public Set<Doctor> getDoctor() {
+		return this.doctors;
+	}
+	
+	//@OneToMany(mappedBy = "receptionist")
 	public Set<Patient> getPatients(){
 		return this.patients;
 	}
-	*/
+	
+	public void setPatients(Set<Patient> patients) {
+		this.patients = patients;
+	}
+	
+	
+	
+	public void addPatient(Patient newPatient) {
+		patients.add(newPatient);
+	}
+	
 	public void  bookAppointments() {
 	}
 	public void cancelOrChangeAppointments() {
