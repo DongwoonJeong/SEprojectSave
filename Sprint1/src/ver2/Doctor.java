@@ -48,6 +48,10 @@ public class Doctor {
 		return string;
 	}
 	
+	public void followUp(long appointment) {
+		
+		
+	}
 	
 
 	

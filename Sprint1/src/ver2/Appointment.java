@@ -1,7 +1,5 @@
 package ver2;
 
-import java.util.Set;
-
 public class Appointment {
 	
 	private long appointmentId;
