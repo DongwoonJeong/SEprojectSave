@@ -2,7 +2,7 @@ package ver2;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Patient {
+public class Patient extends Person{
 
 	 // instance variables 
 	
@@ -10,22 +10,27 @@ public class Patient {
 	 private String middleName;
 	 private String lastName;
 	 private int dateOfBirth;
-	 private int ssn;
+	 private String ssn;
 	 private String sex;
 	 private String address;
 	 private int patientId;
-	 private int appointmentDate;
+	 private String appointmentDate;
 	 private int numOfAppointments;
 	 private Set<Appointment> appointment;
 	 private Set<Doctor> doctor;
 	 //private Set<Nurse> nurse;
 	
 	  // constructors
-	 public Patient(String name) {
-		 this.lastName= name;
+	 public Patient(String name,int age, String gender,String appointmentDate,String ssn,String address) {
+		 super.setName(name);
+		 super.setAge(age);
+		 super.setGender(gender);
+		 this.appointmentDate = appointmentDate;
+		 this.ssn = ssn;
+		 this.address = address;
 	 }
 	 
-	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, int ssn, String sex, String address, int patientId, int appointmentDate){
+	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, String ssn, String sex, String address, int patientId, String appointmentDate){
 		 this.firstName= firstName;
 		 this.middleName = middleName;
 		 this.lastName= lastName;
@@ -52,11 +57,8 @@ public class Patient {
 	 public int getDateOfBirth() {
 		 return dateOfBirth;
 	 }
-	 Patient(int ssn) {
-		 this.ssn = ssn;
-	 }
 	 
-	 public int getSsn() {
+	 public String getSsn() {
 		 return ssn;
 	 }
 	 
@@ -72,7 +74,7 @@ public class Patient {
 		 return patientId;
 	 }
 	 
-	 public int getPatntApptDate() {
+	 public String getPatntApptDate() {
 		 return appointmentDate;
 	 }
 	 
@@ -137,7 +139,7 @@ public class Patient {
 	public void bookAppointments() {
 		System.out.println("enter appointment date :");
 		Scanner input= new Scanner(System.in);
-		this.appointmentDate = input.nextInt();
+		this.appointmentDate = input.nextLine();
 	}
 
 
@@ -145,6 +147,6 @@ public class Patient {
 	}
 
 	public String toString() {
-		return firstName+" "+lastName;
+		return "Patient name: "+ getName() +"/ Genter: " + getGender()+ "/ Age: " +getAge();
 	}
 }
