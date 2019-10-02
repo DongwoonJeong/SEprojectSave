@@ -133,15 +133,19 @@ public class Patient {
 		 return nurse;
 	 }
 */
-     
+    // patient can book appointments
 	public void bookAppointments() {
 		System.out.println("enter appointment date :");
 		Scanner input= new Scanner(System.in);
 		this.appointmentDate = input.nextInt();
 	}
 
-
+    //patient modifies appointments
 	public void cancelorChangeAppointments() {
+		System.out.println("please tell your patient ID to cancel or change the appointment ?");
+		Scanner input = new Scanner (System.in);
+		this.patientId = input.nextInt();
+		
 	}
 
 	public String toString() {
