@@ -1,12 +1,16 @@
 package ver2;
 import java.util.Set;
 
+
 public class Doctor {
 	
 	//private String name;
 	private String notes;
 	
 	
+
+public class Doctor extends Person {
+
 	
 	private Set<Patient> patients;
 	
@@ -15,10 +19,13 @@ public class Doctor {
 	private Set<Receptionist> receptionists;
 	
 	public Doctor(String name) {
+
 		this.setName(name);
 	}
 	private void setName(String name) {
 		
+
+		super.setName(name);
 	}
 	//@OneToMany(mappedBy = "doctor")
 	public Set<Patient> getPatient() {
@@ -54,5 +61,9 @@ public class Doctor {
 	}
 	
 
+	
+	public String toString() {
+		return "Doctor: "+ getName();
+	}
 	
 }

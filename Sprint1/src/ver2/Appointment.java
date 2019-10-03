@@ -3,14 +3,15 @@ package ver2;
 public class Appointment {
 	
 	private long appointmentId;
-	private long appointmentDate;
+	private String appointmentDate;
 	private Patient patient;
 	
-	public Appointment(long appointmentDate) {
+	public Appointment(Patient patient,String appointmentDate) {
+		this.patient = patient;
 		this.appointmentDate = appointmentDate;
 	}
 	
-	public long getAppointmentDate() {
+	public String getAppointmentDate() {
 		return this.appointmentDate;
 	}
 	

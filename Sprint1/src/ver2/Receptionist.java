@@ -1,16 +1,14 @@
 package ver2;
 import java.util.Set;
 
-public class Receptionist {
-	
-	private String name;
+public class Receptionist extends Person{
 	
 	private Set<Patient> patients;
 	
 	private Set<Doctor> doctors;
 	
 	Receptionist(String name){
-		this.name = name;
+		super.setName(name);
 	}
 	
 	//@OneToMany(mappedBy ="receptionist")
@@ -27,10 +25,8 @@ public class Receptionist {
 		this.patients = patients;
 	}
 	
-	
-	
-	public void addPatient(Patient newPatient) {
-		patients.add(newPatient);
+	public String toString() {
+		return "Receptionist name: "+ getName();
 	}
 	
 	public void  bookAppointments() {
@@ -42,5 +38,7 @@ public class Receptionist {
 	}
 	public void patientFileRecords() {
 	}
+	
+	
 
 }
