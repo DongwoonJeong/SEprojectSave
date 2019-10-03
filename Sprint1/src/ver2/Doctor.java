@@ -3,6 +3,9 @@ import java.util.Set;
 
 public class Doctor extends Person {
 	
+	private String notes;
+	private int followUp;
+	
 	private Set<Patient> patients;
 	
 	private Set<Nurse> nurses;
@@ -36,5 +39,19 @@ public class Doctor extends Person {
 	public String toString() {
 		return "Doctor: "+ getName();
 	}
+	public void Note (String Notes) {
+		this.setNotes(Notes);
+	}
+	public String getNotes() {
+		return notes;
+	}
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+	public void followUp(long appointment) {
+		
+	}
 	
 }
+
+
