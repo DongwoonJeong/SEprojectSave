@@ -6,12 +6,26 @@ import java.util.Scanner;
 public class driver {
 
 	public static void main(String[] args) {
+
+		
+		Patient patient1 = new Patient("Hoyong","middleName","Lee",940709,1105535413,"Male","1505 Lankford Dr",
+				5765,927);
+		patient1.bookAppointments();
+		System.out.println(patient1.getFirstName());
+		
+		Patient kevin = new Patient("kevin");
+		Receptionist r1 = new Receptionist("r1");
+		
+		
+		
+
 		// TODO Auto-generated method stub
 		//Scanner 
 		Scanner input = new Scanner(System.in);
 		
 		//our data
 		Set<Patient> patients = new HashSet<Patient>();
+
 		Set<Appointment> appointments = new HashSet<Appointment>();
 		
 		//what do you want to do?
