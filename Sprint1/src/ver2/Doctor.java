@@ -3,7 +3,10 @@ import java.util.Set;
 
 public class Doctor {
 	
-	private String name;
+	//private String name;
+	private String notes;
+	private int followUp;
+	
 	
 	private Set<Patient> patients;
 	
@@ -12,7 +15,10 @@ public class Doctor {
 	private Set<Receptionist> receptionists;
 	
 	public Doctor(String name) {
-		this.name = name;
+		this.setName(name);
+	}
+	private void setName(String name) {
+		
 	}
 	//@OneToMany(mappedBy = "doctor")
 	public Set<Patient> getPatient() {
@@ -28,11 +34,25 @@ public class Doctor {
 	public Set<Receptionist> getReceptionist() {
 		return this.receptionists;
 	}
-	
-	public void getPrescriptions() {
-	}
     
-	public void wrriteNotesAsInstructed() {
+	public void Note (String Notes) {
+		this.setNotes(Notes);
 	}
+	public String getNotes() {
+		return notes;
+	}
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+	public String add(String string) {
+		return string;
+	}
+	
+	public void followUp(long appointment) {
+		
+		
+	}
+	
+
 	
 }
