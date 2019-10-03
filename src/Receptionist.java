@@ -18,6 +18,7 @@ public class Receptionist {
 	
 	private Set<Doctor> doctors;
 
+
 	private String appointment;
 
 	private String address;
@@ -35,6 +36,7 @@ public class Receptionist {
 	private int parameter5;
 
 	private long whole;
+ master
 	
 	Receptionist(String name){
 		this.name = name;

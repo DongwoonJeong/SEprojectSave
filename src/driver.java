@@ -1,10 +1,17 @@
 import java.util.Set;
+
 import java.io.FileNotFoundException;
+
+
 import java.util.*;
 
 public class driver {
 
+
 	public static void main(String[] args) throws FileNotFoundException {
+
+	public static void main(String[] args) {
+
 		// TODO Auto-generated method stub
 		/*
 		Patient patient1 = new Patient("Hoyong","middleName","Lee",940709,1105535413,"Male","1505 Lankford Dr",
@@ -12,11 +19,14 @@ public class driver {
 		patient1.bookAppointments();
 		System.out.println(patient1.getFirstName());
 		*/
+
 		Receptionist  r2 = new Receptionist("Hello");
 		//r2.bookAppointments();
 		r2.cancelOrChangeAppointments();
 		r2.patientInformation();
 		
+
+
 		Patient kevin = new Patient("kevin");
 		Receptionist r1 = new Receptionist("r1");
 		
@@ -40,4 +50,3 @@ public class driver {
 		
 	}
 
-}
