@@ -30,7 +30,7 @@ public class Patient extends Person{
 		 this.address = address;
 	 }
 	 
-	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, String ssn, String sex, String address, int patientId, String appointmentDate){
+	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, int i, String sex, String address, int patientId, String appointmentDate){
 		 this.firstName= firstName;
 		 this.middleName = middleName;
 		 this.lastName= lastName;
