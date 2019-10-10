@@ -1,8 +1,8 @@
-package ver2;
+package test;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Patient extends Person{
+public class Patient {
 
 	 // instance variables 
 	
@@ -10,27 +10,22 @@ public class Patient extends Person{
 	 private String middleName;
 	 private String lastName;
 	 private int dateOfBirth;
-	 private String ssn;
+	 private int ssn;
 	 private String sex;
 	 private String address;
 	 private int patientId;
-	 private String appointmentDate;
+	 private int appointmentDate;
 	 private int numOfAppointments;
 	 private Set<Appointment> appointment;
 	 private Set<Doctor> doctor;
 	 //private Set<Nurse> nurse;
 	
 	  // constructors
-	 public Patient(String name,int age, String gender,String appointmentDate,String ssn,String address) {
-		 super.setName(name);
-		 super.setAge(age);
-		 super.setGender(gender);
-		 this.appointmentDate = appointmentDate;
-		 this.ssn = ssn;
-		 this.address = address;
+	 public Patient(String name) {
+		 this.lastName= name;
 	 }
 	 
-	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, int i, String sex, String address, int patientId, String appointmentDate){
+	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, int ssn, String sex, String address, int patientId, int appointmentDate){
 		 this.firstName= firstName;
 		 this.middleName = middleName;
 		 this.lastName= lastName;
@@ -57,8 +52,11 @@ public class Patient extends Person{
 	 public int getDateOfBirth() {
 		 return dateOfBirth;
 	 }
+	 Patient(int ssn) {
+		 this.ssn = ssn;
+	 }
 	 
-	 public String getSsn() {
+	 public int getSsn() {
 		 return ssn;
 	 }
 	 
@@ -74,7 +72,7 @@ public class Patient extends Person{
 		 return patientId;
 	 }
 	 
-	 public String getPatntApptDate() {
+	 public int getPatntApptDate() {
 		 return appointmentDate;
 	 }
 	 
@@ -135,22 +133,18 @@ public class Patient extends Person{
 		 return nurse;
 	 }
 */
-    // patient can book appointments
+     
 	public void bookAppointments() {
 		System.out.println("enter appointment date :");
 		Scanner input= new Scanner(System.in);
-		this.appointmentDate = input.nextLine();
+		this.appointmentDate = input.nextInt();
 	}
 
-    //patient modifies appointments
+
 	public void cancelorChangeAppointments() {
-		System.out.println("please tell your patient ID to cancel or change the appointment ?");
-		Scanner input = new Scanner (System.in);
-		this.patientId = input.nextInt();
-		
 	}
 
 	public String toString() {
-		return "Patient name: "+ getName() +"/ Genter: " + getGender()+ "/ Age: " +getAge();
+		return firstName+" "+lastName;
 	}
 }
