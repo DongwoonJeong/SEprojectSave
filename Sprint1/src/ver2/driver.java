@@ -1,7 +1,7 @@
 package ver2;
-import java.util.Set;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
 
 public class driver {
 
@@ -11,15 +11,18 @@ public class driver {
 		Scanner input = new Scanner(System.in);
 		
 		//our data
-		Set<Patient> patients = new HashSet<Patient>();
-		Set<Appointment> appointments = new HashSet<Appointment>();
+		ArrayList<Patient> patients = new ArrayList<Patient>();
+		ArrayList<Appointment> appointments = new ArrayList<Appointment>();
+		
+		//File file = new File ("tcpprobe.dat");
 		
 		//what do you want to do?
 		while (true) {
 		System.out.println("What do you want to do: \n"
 				+ "1. make a new appointment\n"
 				+ "2. cancel an anppointment\n"
-				+ "3. extit \n");
+				+ "3. change appointment date\n"
+				+ "4. extit \n");
 		
 		int action = input.nextInt();
 		
@@ -28,20 +31,26 @@ public class driver {
 			makeAppointment(patients,appointments);
 		
 		//cancel an appointment (will work later)
-		//if (action == 2)
+		if (action == 2)
+			cancelAppointment(appointments);
+		
+		//change appointment date
+		if (action == 3)
+			changeAppointmentDate(appointments);
 		
 		//break
-		if (action == 3 )
+		if (action == 4 )
 			break;
 		}
 		
-		
 		System.out.println("patients list: ");
 		System.out.println(patients);
+		System.out.println("Appointment list: ");
+		System.out.println(appointments);
 		
 	}
 	
-	public static void makeAppointment(Set<Patient> patients, Set<Appointment> appointments) {
+	public static void makeAppointment(ArrayList<Patient> patients, ArrayList<Appointment> appointments) {
 		
 		Scanner input = new Scanner(System.in);
 		
@@ -69,7 +78,7 @@ public class driver {
 		//make a new appointment with information given
 		Appointment newAppointment = new Appointment(newPatient, appointmentDate);
 		//make a new set of appointment for the patient (it is his first appointment)
-		Set<Appointment> Set_newAppointments = new HashSet<Appointment>();
+		ArrayList<Appointment> Set_newAppointments = new ArrayList<Appointment>();
 		//add the first appointment to the set.
 		Set_newAppointments.add(newAppointment);
 		
@@ -84,6 +93,42 @@ public class driver {
 		//add new patient and new appointment to the data.
 		patients.add(newPatient);
 		appointments.add(newAppointment);
+	}
+	public static void cancelAppointment(ArrayList<Appointment> appointments) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter ssn: ");
+		String ssn = input.next();
+		
+		boolean find=false;
+		for(int i = 0; i< appointments.size(); i++) {
+			if (appointments.get(i).getPatient().getSsn().equals(ssn)) {
+				appointments.remove(i);
+				find = true;
+			}
+		}
+		if (find == false)
+			System.out.println("no such appointment");
+		
+	}
+	public static void changeAppointmentDate(ArrayList<Appointment> appointments) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter ssn: ");
+		String ssn = input.next();
+		
+		boolean find=false;
+		for(int i = 0; i< appointments.size(); i++) {
+			if (appointments.get(i).getPatient().getSsn().equals(ssn)) {
+				System.out.println("Enter the new date: ");
+				String appointmentDate = input.next();
+				appointments.get(i).setAppointmentDate(appointmentDate);
+				find = true;
+			}
+		}
+		if (find == false)
+			System.out.println("no such appointment");
+		
 	}
 
 }

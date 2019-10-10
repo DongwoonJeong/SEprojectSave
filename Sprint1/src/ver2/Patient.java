@@ -1,6 +1,6 @@
 package ver2;
 import java.util.Scanner;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class Patient extends Person{
 
@@ -16,8 +16,8 @@ public class Patient extends Person{
 	 private int patientId;
 	 private String appointmentDate;
 	 private int numOfAppointments;
-	 private Set<Appointment> appointment;
-	 private Set<Doctor> doctor;
+	 private ArrayList<Appointment> appointment;
+	 private ArrayList<Doctor> doctor;
 	 //private Set<Nurse> nurse;
 	
 	  // constructors
@@ -87,16 +87,16 @@ public class Patient extends Person{
 	 }
 	 
 	 //@ManyToMany(mappedBy = "Patient")
-	 public Set<Appointment> getAppointment(){
+	 public ArrayList<Appointment> getAppointment(){
 		 return this.appointment;
 	 }
 	 
 	//@ManyToMany(mappedBy = "Patient")
-	 public Set<Doctor> getDoctor(){
+	 public ArrayList<Doctor> getDoctor(){
 		 	return this.doctor;
 	 }
 	 
-	 public void setAppointment(Set<Appointment> appointment) {
+	 public void setAppointment(ArrayList<Appointment> appointment) {
 		 this.appointment = appointment;
 	 }
 	 

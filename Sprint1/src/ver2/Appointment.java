@@ -17,6 +17,10 @@ public class Appointment {
 		return this.appointmentDate;
 	}
 	
+	public void setAppointmentDate(String appointmentDate) {
+		this.appointmentDate = appointmentDate;
+	}
+	
 	public long getAppointmentId() {
 		return this.appointmentId;
 	}
@@ -35,7 +39,7 @@ public class Appointment {
 	}
 	
 	public String toString() {
-		return patient.getLastName()+" Date: "+ getAppointmentDate();
+		return patient.getName()+" Date: "+ getAppointmentDate();
 	}
 
 }

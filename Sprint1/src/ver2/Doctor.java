@@ -1,32 +1,32 @@
 package ver2;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class Doctor extends Person {
 	
 	private String notes;
 	private int followUp;
 	
-	private Set<Patient> patients;
+	private ArrayList<Patient> patients;
 	
-	private Set<Nurse> nurses;
-	
-	private Set<Receptionist> receptionists;
+	private ArrayList<Receptionist> receptionists;
 	
 	public Doctor(String name) {
 		super.setName(name);
 	}
 	//@OneToMany(mappedBy = "doctor")
-	public Set<Patient> getPatient() {
+	public ArrayList<Patient> getPatient() {
 		return this.patients;
 	}
 	
+	/*
 	//@OneToMany(mappedBy = "doctor")
 	public Set<Nurse> getNurses(){
 		return this.nurses;
 	}
+	*/
 	
 	//@OneToOne(optional = false)
-	public Set<Receptionist> getReceptionist() {
+	public ArrayList<Receptionist> getReceptionist() {
 		return this.receptionists;
 	}
 	
