@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Patient extends Person{
 
 	 // instance variables 
-
 	 private int dateOfBirth;
 	 private String ssn;
 	 private String address;
@@ -44,7 +43,7 @@ public class Patient extends Person{
 		 return this.appointment;
 	 }
 	 
-	//@ManyToMany(mappedBy = "Patient")
+	 //@ManyToMany(mappedBy = "Patient")
 	 public ArrayList<Doctor> getDoctor(){
 		 	return this.doctor;
 	 }
@@ -80,7 +79,6 @@ public class Patient extends Person{
 		 return nurse;
 	 }
 */
-
 	public String toString() {
 		return String.format("patient name: %-12s /Age: %-5s/ Gender: %-4s/ Appointment Date: %-12s/ SSN: %-14s/ Address: %-24s"
 				,getName(),getAge(),getGender(),getAppointmentDate(),getSsn(),getAddress());

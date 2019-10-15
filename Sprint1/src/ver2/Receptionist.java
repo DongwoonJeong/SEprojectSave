@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Receptionist extends Person{
 	
 	private ArrayList<Patient> patients;
-	
 	private ArrayList<Doctor> doctors;
 	
 	Receptionist(String name){
@@ -27,18 +26,6 @@ public class Receptionist extends Person{
 	
 	public String toString() {
 		return "Receptionist name: "+ getName();
-	}
-	
-	public void  bookAppointments() {
-	}
-	public void cancelOrChangeAppointments() {
-	}
-	
-	public void patientInformation() {
-	}
-	public void patientFileRecords() {
-	}
-	
-	
+	}	
 
 }

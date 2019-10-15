@@ -15,7 +15,6 @@ public class driver {
 		ArrayList<Patient> patients = new ArrayList<Patient>();
 		ArrayList<Appointment> appointments = new ArrayList<Appointment>();
 		
-		
 		//what do you want to do?
 		while (true) {
 		System.out.println("What do you want to do: \n"
@@ -43,11 +42,11 @@ public class driver {
 			break;
 		}
 		
-		System.out.println("patients list: ");
+		System.out.println("new patients list: ");
 		System.out.println(patients);
-		System.out.println("Appointment list: ");
+		System.out.println("new Appointment list: ");
 		System.out.println(appointments);
-		
+
 	}
 	
 	public static void makeAppointment(ArrayList<Patient> patients, ArrayList<Appointment> appointments) {
@@ -121,15 +120,15 @@ public class driver {
 		System.out.println("Enter ssn: ");
 		String ssn = input.next();
 		
-		boolean find=false;
+		//boolean find=false;
 		for(int i = 0; i< appointments.size(); i++) {
 			if (appointments.get(i).getPatient().getSsn().equals(ssn)) {
 				appointments.remove(i);
-				find = true;
+				//find = true;
 			}
 		}
-		if (find == false)
-			System.out.println("no such appointment");
+		//if (find == false)
+			//System.out.println("no such appointment");
 		
         try {
             File inputFile = new File("appointmentFile.txt");

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Doctor extends Person {
 	
 	private String notes;
-	private int followUp;
 	
 	private ArrayList<Patient> patients;
 	
@@ -18,22 +17,12 @@ public class Doctor extends Person {
 		return this.patients;
 	}
 	
-	/*
-	//@OneToMany(mappedBy = "doctor")
-	public Set<Nurse> getNurses(){
-		return this.nurses;
-	}
-	*/
-	
 	//@OneToOne(optional = false)
 	public ArrayList<Receptionist> getReceptionist() {
 		return this.receptionists;
 	}
 	
 	public void getPrescriptions() {
-	}
-    
-	public void wrriteNotesAsInstructed() {
 	}
 	
 	public String toString() {
@@ -47,9 +36,6 @@ public class Doctor extends Person {
 	}
 	public void setNotes(String notes) {
 		this.notes = notes;
-	}
-	public void followUp(long appointment) {
-		
 	}
 	
 }
