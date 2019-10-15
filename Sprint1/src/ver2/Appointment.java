@@ -15,6 +15,10 @@ public class Appointment {
 		return this.appointmentDate;
 	}
 	
+	public void setAppointmentDate(String appointmentDate) {
+		this.appointmentDate = appointmentDate;
+	}
+	
 	public long getAppointmentId() {
 		return this.appointmentId;
 	}
@@ -33,7 +37,7 @@ public class Appointment {
 	}
 	
 	public String toString() {
-		return patient.getLastName()+" Date: "+ getAppointmentDate();
+		return String.format("patient name: %-12s / patient ssn: %-14s/ appointment date: %-10s",patient.getName(),patient.getSsn(),getAppointmentDate());
 	}
 
 }

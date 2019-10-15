@@ -1,26 +1,18 @@
 package ver2;
 import java.util.Scanner;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class Patient extends Person{
 
 	 // instance variables 
-	
-	 private String firstName;
-	 private String middleName;
-	 private String lastName;
 	 private int dateOfBirth;
 	 private String ssn;
-	 private String sex;
 	 private String address;
-	 private int patientId;
 	 private String appointmentDate;
-	 private int numOfAppointments;
-	 private Set<Appointment> appointment;
-	 private Set<Doctor> doctor;
-	 //private Set<Nurse> nurse;
+	 private ArrayList<Appointment> appointment;
+	 private ArrayList<Doctor> doctor;
 	
-	  // constructors
+	 // constructors
 	 public Patient(String name,int age, String gender,String appointmentDate,String ssn,String address) {
 		 super.setName(name);
 		 super.setAge(age);
@@ -28,30 +20,6 @@ public class Patient extends Person{
 		 this.appointmentDate = appointmentDate;
 		 this.ssn = ssn;
 		 this.address = address;
-	 }
-	 
-	 public Patient(String firstName, String middleName, String lastName, int dateOfBirth, int i, String sex, String address, int patientId, String appointmentDate){
-		 this.firstName= firstName;
-		 this.middleName = middleName;
-		 this.lastName= lastName;
-		 this.dateOfBirth= dateOfBirth;
-		 this.ssn= ssn;
-		 this.sex =sex;
-		 this.address= address;
-		 this.patientId=patientId;
-		 this.appointmentDate= appointmentDate;
-	 }
-	 
-	 public String getFirstName() {
-		 return firstName;	 
-	 }
-	 
-	 public String getMiddleName() {
-		 return middleName;
-	 }
-	 
-	 public String getLastName() {
-		 return lastName;
 	 }
 	 
 	 public int getDateOfBirth() {
@@ -62,51 +30,27 @@ public class Patient extends Person{
 		 return ssn;
 	 }
 	 
-	 public String getPatientGender() {
-		 return sex;
-	 }
-	 
-	 public String getPatientAddress() {
+	 public String getAddress() {
 		 return address; 
 	 }
 	 
-	 public int getPatientId() {
-		 return patientId;
-	 }
-	 
-	 public String getPatntApptDate() {
+	 public String getAppointmentDate() {
 		 return appointmentDate;
 	 }
 	 
-	 public int getNumOfAppoints() {
-		 return appointment.size();
-	 }
-	 
-	 public void addAppointments(Appointment s) {
-		 appointment.add(s);
-	 }
-	 
 	 //@ManyToMany(mappedBy = "Patient")
-	 public Set<Appointment> getAppointment(){
+	 public ArrayList<Appointment> getAppointment(){
 		 return this.appointment;
 	 }
 	 
-	//@ManyToMany(mappedBy = "Patient")
-	 public Set<Doctor> getDoctor(){
+	 //@ManyToMany(mappedBy = "Patient")
+	 public ArrayList<Doctor> getDoctor(){
 		 	return this.doctor;
 	 }
 	 
-	 public void setAppointment(Set<Appointment> appointment) {
+	 public void setAppointment(ArrayList<Appointment> appointment) {
 		 this.appointment = appointment;
 	 }
-	 
-	 
-	 /*
-	 public boolean equals(object o) {
-		 Patient i = (Patient)o;
-		 return this.ssn.equals(i.ssn);
-	 }
-	 */
 	 
   /* 
 	 private Receptionist receptionist;
@@ -135,22 +79,8 @@ public class Patient extends Person{
 		 return nurse;
 	 }
 */
-    // patient can book appointments
-	public void bookAppointments() {
-		System.out.println("enter appointment date :");
-		Scanner input= new Scanner(System.in);
-		this.appointmentDate = input.nextLine();
-	}
-
-    //patient modifies appointments
-	public void cancelorChangeAppointments() {
-		System.out.println("please tell your patient ID to cancel or change the appointment ?");
-		Scanner input = new Scanner (System.in);
-		this.patientId = input.nextInt();
-		
-	}
-
 	public String toString() {
-		return "Patient name: "+ getName() +"/ Genter: " + getGender()+ "/ Age: " +getAge();
+		return String.format("patient name: %-12s /Age: %-5s/ Gender: %-4s/ Appointment Date: %-12s/ SSN: %-14s/ Address: %-24s"
+				,getName(),getAge(),getGender(),getAppointmentDate(),getSsn(),getAddress());
 	}
 }
