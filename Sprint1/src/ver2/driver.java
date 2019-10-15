@@ -35,7 +35,7 @@ public class driver {
 		
 		//change appointment date
 		if (action == 3)
-			changeAppointmentDate(appointments);
+			changeAppointmentDate(patients,appointments);
 		
 		//break
 		if (action == 4 )
@@ -170,24 +170,7 @@ public class driver {
         }
 	}
 
-	public static void changeAppointmentDate(ArrayList<Appointment> appointments) {
-		Scanner input = new Scanner(System.in);
-		
-		System.out.println("Enter ssn: ");
-		String ssn = input.next();
-		
-		boolean find=false;
-		for(int i = 0; i< appointments.size(); i++) {
-			if (appointments.get(i).getPatient().getSsn().equals(ssn)) {
-				System.out.println("Enter the new date: ");
-				String appointmentDate = input.next();
-				appointments.get(i).setAppointmentDate(appointmentDate);
-				find = true;
-			}
-		}
-		if (find == false)
-			System.out.println("no such appointment");
+	public static void changeAppointmentDate(ArrayList<Patient> patients, ArrayList<Appointment> appointments) {
 		
 	}
-
 }

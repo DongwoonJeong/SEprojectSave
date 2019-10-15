@@ -1,3 +1,4 @@
+package test;
 import java.util.Set;
 
 import java.io.FileNotFoundException;
@@ -10,7 +11,6 @@ public class driver {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-	public static void main(String[] args) {
 
 		// TODO Auto-generated method stub
 		/*
@@ -21,7 +21,7 @@ public class driver {
 		*/
 
 		Receptionist  r2 = new Receptionist("Hello");
-		//r2.bookAppointments();
+		r2.bookAppointments();
 		r2.cancelOrChangeAppointments();
 		r2.patientInformation();
 		
@@ -49,4 +49,4 @@ public class driver {
 		System.out.println(r1.getPatients());
 		
 	}
-
+}

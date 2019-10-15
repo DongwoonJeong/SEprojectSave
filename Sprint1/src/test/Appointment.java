@@ -1,22 +1,19 @@
-package ver2;
+package test;
+
+import java.util.Set;
 
 public class Appointment {
 	
 	private long appointmentId;
-	private String appointmentDate;
+	private long appointmentDate;
 	private Patient patient;
 	
-	public Appointment(Patient patient,String appointmentDate) {
-		this.patient = patient;
+	public Appointment(long appointmentDate) {
 		this.appointmentDate = appointmentDate;
 	}
 	
-	public String getAppointmentDate() {
+	public long getAppointmentDate() {
 		return this.appointmentDate;
-	}
-	
-	public void setAppointmentDate(String appointmentDate) {
-		this.appointmentDate = appointmentDate;
 	}
 	
 	public long getAppointmentId() {
@@ -37,7 +34,7 @@ public class Appointment {
 	}
 	
 	public String toString() {
-		return String.format("patient name: %-12s / patient ssn: %-14s/ appointment date: %-10s",patient.getName(),patient.getSsn(),getAppointmentDate());
+		return patient.getLastName()+" Date: "+ getAppointmentDate();
 	}
 
 }
