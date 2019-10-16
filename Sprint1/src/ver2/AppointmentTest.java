@@ -1,7 +1,6 @@
 package ver2;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -32,4 +31,4 @@ public void testToString() {
 	
 	
 	
-}
+

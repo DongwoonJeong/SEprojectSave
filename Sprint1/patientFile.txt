@@ -1,1 +1,0 @@
-patient name: 2            /Age: 2    / Gender: 2   / Appointment Date: 2           / SSN: 2             / Address: 2                       / Date Of Birth: 2                       

@@ -40,4 +40,5 @@ public class Appointment {
 		return String.format("patient name: %-12s / patient ssn: %-14s/ appointment date: %-10s",patient.getName(),patient.getSsn(),getAppointmentDate());
 	}
 
+	
 }

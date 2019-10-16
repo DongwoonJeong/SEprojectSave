@@ -1,5 +1,5 @@
 package ver2;
-import java.util.Scanner;
+
 import java.util.ArrayList;
 
 public class Patient extends Person{
@@ -59,26 +59,21 @@ public class Patient extends Person{
 	 
   /* 
 	 private Receptionist receptionist;
-
 	 private Doctor doctor;
-
 	 private Nurse nurse;
 	  private Appointment appointment;
 	 
 	 
 	 
 	
-
 	 OneToOne(mappedBy = "receptionist")
 	 public Receptionist getReceptionist() {
 		 return receptionist;
 	 }
-
 	 @OneToOne(mappedBy = "patient")
 	 public Doctor getDoctor() {
 		 return doctor;
 	 }
-
 	 @OneToOne(mappedBy = "nurse")
 	 public Nurse getNurse() {
 		 return nurse;
