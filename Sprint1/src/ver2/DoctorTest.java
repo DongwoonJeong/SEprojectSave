@@ -8,9 +8,9 @@ class DoctorTest {
 
 	@Test
 	void testNote() {
-		Doctor takeNotes = new Doctor(null);
-		takeNotes.setNotes("hey this is the string i added");
-		assertEquals("hey this is the string i added",takeNotes.getNotes());
+		Doctor actual = new Doctor(null);
+		actual.setNotes("hey this is the string i added");
+		assertEquals("hey this is the string i added",actual.getNotes());
 		
 		
 	}

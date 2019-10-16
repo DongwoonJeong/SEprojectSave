@@ -74,7 +74,7 @@ public class driver {
 		System.out.println("Enter Date of Bitrh: ");
 		String dateOfbirth = input.next();
 		
-		System.out.println("Appointment made");
+		System.out.println("New Appointment made\n\n");
 		
 		//let's guess the patient has no previous record
 		//make a new patient with information given

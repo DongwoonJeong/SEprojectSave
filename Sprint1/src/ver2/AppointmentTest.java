@@ -9,21 +9,21 @@ class AppointmentTest {
 
 	@Test
 	public void Appointmenttest() {
-	Appointment takeappointmentDate = new Appointment(null,null);	
-	takeappointmentDate.setAppointmentDate("21 jan 1998");
-	assertEquals("21 jan 1998",takeappointmentDate.getAppointmentDate());
+	Appointment actual = new Appointment(null,null);	
+	actual.setAppointmentDate("21 jan 1998");
+	assertEquals("21 jan 1998",actual.getAppointmentDate());
 	
 		
 	}
 	@Test
 public void testToString() {
 		
-		String Appointmentdate = "22 Feb 2019";
-		Appointment p = new Appointment(null,null);
-		p.setAppointmentDate(Appointmentdate);
-		String.format("patient d: %-12s ", Appointmentdate);
+		String expected = "22 Feb 2019";
+		Appointment actual = new Appointment(null,null);
+		actual.setAppointmentDate(expected);
+		String.format("patient d: %-12s ", expected);
 		
-		assertEquals(p.getAppointmentDate(),Appointmentdate.toString());
+		assertEquals(actual.getAppointmentDate(),expected.toString());
 		
 
 		
