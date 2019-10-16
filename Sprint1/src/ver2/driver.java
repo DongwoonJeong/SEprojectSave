@@ -6,12 +6,11 @@ import java.io.*;
 
 public class driver {
 
-	private static Scanner input;
-	private static Scanner input2;
-	private static Scanner input3;
 
 	public static void main(String[] args) {
-		input2 = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		//Scanner 
+		Scanner input = new Scanner(System.in);
 		
 		//our data
 		ArrayList<Patient> patients = new ArrayList<Patient>();
@@ -114,13 +113,14 @@ public class driver {
 			   }
 
 		
+
 	}
 	
 	public static void cancelAppointment(ArrayList<Appointment> appointments){
-		input3 = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Enter ssn: ");
-		String ssn = input3.next();
+		String ssn = input.next();
 		
 		//boolean find=false;
 		for(int i = 0; i< appointments.size(); i++) {
@@ -143,6 +143,7 @@ public class driver {
             BufferedReader br = new BufferedReader(new FileReader("appointmentFile.txt"));
             PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
             String line = null;
+
 
             //Read from the original file and write to the new
             //unless content matches data to be removed.
