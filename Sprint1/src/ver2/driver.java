@@ -103,6 +103,7 @@ import java.io.*;
 
 public class driver {
 
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Scanner 
@@ -120,7 +121,7 @@ public class driver {
 				+ "3. change appointment date\n"
 				+ "4. extit \n");
 		
-		int action = input.nextInt();
+		int action = input2.nextInt();
 		
 		//make a new appointment
 		if (action == 1 )
@@ -148,9 +149,9 @@ public class driver {
 	
 	public static void makeAppointment(ArrayList<Patient> patients, ArrayList<Appointment> appointments) {
 		
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		
-		System.out.println("Enter a patient name: ");
+		System.out.println("Enter a patient name:");
 		String name = input.next();
 		
 		System.out.println("Enter a patient age: ");
@@ -209,6 +210,7 @@ public class driver {
 			   }
 
 		
+
 	}
 	
 	public static void cancelAppointment(ArrayList<Appointment> appointments){
@@ -238,6 +240,7 @@ public class driver {
             BufferedReader br = new BufferedReader(new FileReader("appointmentFile.txt"));
             PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
             String line = null;
+
 
             //Read from the original file and write to the new
             //unless content matches data to be removed.
