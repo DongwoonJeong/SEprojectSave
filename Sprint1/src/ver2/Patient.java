@@ -11,20 +11,19 @@ public class Patient extends Person{
 	 private String appointmentDate;
 	 private ArrayList<Appointment> appointment;
 	 private ArrayList<Doctor> doctor;
+	 private String DateOfBirth;
 	
 	 // constructors
-	 public Patient(String name,int age, String gender,String appointmentDate,String ssn,String address) {
+	 public Patient(String name,int age, String gender,String appointmentDate,String ssn,String address , String DateOfBirth) {
 		 super.setName(name);
 		 super.setAge(age);
 		 super.setGender(gender);
 		 this.appointmentDate = appointmentDate;
 		 this.ssn = ssn;
 		 this.address = address;
+		 this.DateOfBirth = DateOfBirth;
 	 }
 	 
-	 public int getDateOfBirth() {
-		 return dateOfBirth;
-	 }
 	 
 	 public String getSsn() {
 		 return ssn;
@@ -49,7 +48,13 @@ public class Patient extends Person{
 	 }
 	 
 	 public void setAppointment(ArrayList<Appointment> appointment) {
-		 this.appointment = appointment;
+		 	this.appointment = appointment;
+	 }
+	 public void setDateOfBirth(String DateOfBirth) {
+			this.DateOfBirth = DateOfBirth;
+		}
+	 public String getDateOfBirth() {
+		 	return DateOfBirth;
 	 }
 	 
   /* 
@@ -75,7 +80,9 @@ public class Patient extends Person{
 	 }
 */
 	public String toString() {
-		return String.format("patient name: %-12s /Age: %-5s/ Gender: %-4s/ Appointment Date: %-12s/ SSN: %-14s/ Address: %-24s"
-				,getName(),getAge(),getGender(),getAppointmentDate(),getSsn(),getAddress());
+		return String.format("patient name: %-12s /Age: %-5s/ Gender: %-4s/ Appointment Date: %-12s/ SSN: %-14s/ Address: %-24s/ Date Of Birth: %-24s"  
+				,getName(), getAge() , getGender() ,getAppointmentDate(), getSsn() , getAddress(), getDateOfBirth());
 	}
+
+
 }

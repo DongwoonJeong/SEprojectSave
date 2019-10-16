@@ -169,9 +169,14 @@ public class driver {
 		System.out.println("Enter a patient address: ");
 		String address = input.next();
 		
+		System.out.println("Enter Date of Bitrh: ");
+		String dateOfbirth = input.next();
+		
+		System.out.println("Appointment made");
+		
 		//let's guess the patient has no previous record
 		//make a new patient with information given
-		Patient newPatient = new Patient(name, age, gender, appointmentDate,ssn,address);
+		Patient newPatient = new Patient(name, age, gender, appointmentDate,ssn,address,dateOfbirth);
 		//make a new appointment with information given
 		Appointment newAppointment = new Appointment(newPatient, appointmentDate);
 		//make a new set of appointment for the patient (it is his first appointment)
