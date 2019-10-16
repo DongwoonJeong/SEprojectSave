@@ -1,0 +1,3 @@
+patient name: kevin        /Age: 26   / Gender: M   / Appointment Date: 08-15-1997  / SSN: 252652656     / Address: 2256                    
+patient name: kevin        /Age: 15   / Gender: M   / Appointment Date: 10-15-2019  / SSN: 64646622      / Address: 1641                    
+patient name: kevin        /Age: 15   / Gender: M   / Appointment Date: 10-15-2019  / SSN: 13561651      / Address: 5616                    

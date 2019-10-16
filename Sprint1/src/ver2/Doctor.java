@@ -1,47 +1,33 @@
 package ver2;
-import java.util.Set;
-
-
-public class Doctor {
-	
-	//private String name;
-	private String notes;
-	
-	
+import java.util.ArrayList;
 
 public class Doctor extends Person {
-
 	
-	private Set<Patient> patients;
+	private String notes;
 	
-	private Set<Nurse> nurses;
+	private ArrayList<Patient> patients;
 	
-	private Set<Receptionist> receptionists;
+	private ArrayList<Receptionist> receptionists;
 	
 	public Doctor(String name) {
-
-		this.setName(name);
-	}
-	private void setName(String name) {
-		
-
 		super.setName(name);
 	}
 	//@OneToMany(mappedBy = "doctor")
-	public Set<Patient> getPatient() {
+	public ArrayList<Patient> getPatient() {
 		return this.patients;
 	}
 	
-	//@OneToMany(mappedBy = "doctor")
-	public Set<Nurse> getNurses(){
-		return this.nurses;
-	}
-	
 	//@OneToOne(optional = false)
-	public Set<Receptionist> getReceptionist() {
+	public ArrayList<Receptionist> getReceptionist() {
 		return this.receptionists;
 	}
-    
+	
+	public void getPrescriptions() {
+	}
+	
+	public String toString() {
+		return "Doctor: "+ getName();
+	}
 	public void Note (String Notes) {
 		this.setNotes(Notes);
 	}
@@ -50,20 +36,6 @@ public class Doctor extends Person {
 	}
 	public void setNotes(String notes) {
 		this.notes = notes;
-	}
-	public String add(String string) {
-		return string;
-	}
-	
-	public void followUp(long appointment) {
-		
-		
-	}
-	
-
-	
-	public String toString() {
-		return "Doctor: "+ getName();
 	}
 	
 }

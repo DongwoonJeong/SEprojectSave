@@ -1,0 +1,3 @@
+patient name: kevin        / patient ssn: 252652656     / appointment date: 08-15-1997
+patient name: kevin        / patient ssn: 64646622      / appointment date: 10-15-2019
+patient name: kevin        / patient ssn: 13561651      / appointment date: 10-15-2019
