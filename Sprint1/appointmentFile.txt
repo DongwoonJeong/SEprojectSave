@@ -1,0 +1,1 @@
+patient name: 2            / patient ssn: 2             / appointment date: 2         
