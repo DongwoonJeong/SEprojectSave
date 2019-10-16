@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 class PatientTest extends Person {
 	String name1 ="John";
 	int age1 =18;
-	String gender1 ="Male";
+	String gender1 = "Male";
 	String appointmentDate1 ="20191010";
 	String ssn1 ="000000000";
 	String address1 ="1500 Patterson St";
@@ -23,7 +23,7 @@ class PatientTest extends Person {
 	void testPatient() {
 			//Patient actual = new Patient("John",18,"Male","20191010","000000000","1500 Patterson St","1980-01-01");
 			//assertSame(expected,actual);
-	}
+	  } 
 
 	@Test
 	@DisplayName("Tests for Patient class")
