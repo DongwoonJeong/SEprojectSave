@@ -1,3 +1,4 @@
+package test;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,7 +37,6 @@ public class Receptionist {
 	private int parameter5;
 
 	private long whole;
- master
 	
 	Receptionist(String name){
 		this.name = name;

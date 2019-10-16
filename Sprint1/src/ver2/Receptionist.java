@@ -1,46 +1,31 @@
 package ver2;
-import java.util.Set;
+import java.util.ArrayList;
 
-public class Receptionist {
+public class Receptionist extends Person{
 	
-	private String name;
-	
-	private Set<Patient> patients;
-	
-	private Set<Doctor> doctors;
+	private ArrayList<Patient> patients;
+	private ArrayList<Doctor> doctors;
 	
 	Receptionist(String name){
-		this.name = name;
+		super.setName(name);
 	}
 	
 	//@OneToMany(mappedBy ="receptionist")
-	public Set<Doctor> getDoctor() {
+	public ArrayList<Doctor> getDoctor() {
 		return this.doctors;
 	}
 	
 	//@OneToMany(mappedBy = "receptionist")
-	public Set<Patient> getPatients(){
+	public ArrayList<Patient> getPatients(){
 		return this.patients;
 	}
 	
-	public void setPatients(Set<Patient> patients) {
+	public void setPatients(ArrayList<Patient> patients) {
 		this.patients = patients;
 	}
 	
-	
-	
-	public void addPatient(Patient newPatient) {
-		patients.add(newPatient);
-	}
-	
-	public void  bookAppointments() {
-	}
-	public void cancelOrChangeAppointments() {
-	}
-	
-	public void patientInformation() {
-	}
-	public void patientFileRecords() {
-	}
+	public String toString() {
+		return "Receptionist name: "+ getName();
+	}	
 
 }
