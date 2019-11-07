@@ -1,0 +1,3 @@
+patient name: 1            /Age: 1    / Gender: 1   / Appointment Date: 1           / SSN: 1             / Address: 1                       / Date Of Birth: 1                       
+patient name: 1            /Age: 11   / Gender: 1   / Appointment Date: 1           / SSN: 1             / Address: 1                       / Date Of Birth: 1                       
+patient name: 1            /Age: 1    / Gender: 1   / Appointment Date: 1           / SSN: 1             / Address: 1                       / Date Of Birth: 1                       
