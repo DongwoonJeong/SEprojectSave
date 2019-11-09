@@ -1,5 +1,6 @@
 package ver2;
 import java.util.ArrayList;
+import java.util.*;
 import java.util.Scanner;
 import java.io.File;
 import java.io.*;
@@ -73,6 +74,13 @@ public class HospitalManagement {
 		
 		System.out.println("Enter Date of Bitrh: ");
 		String dateOfbirth = input.next();
+		System.out.println("Choose a doctor you want to see");
+		System.out.println("1. Dongwoon Jeong");
+		System.out.println("2. Hoyong Lee");
+		System.out.println("3. Utsav Patel");
+		System.out.println("4. Tarun Patel");
+		System.out.println("5. Kevin Patel");
+		String doctornumber = input.next();
 		
 		System.out.println("New Appointment made\n\n");
 		
@@ -98,6 +106,53 @@ public class HospitalManagement {
 		patients.add(newPatient);
 		appointments.add(newAppointment);
 		
+		
+		if (Integer.parseInt(doctornumber) ==1) {
+			try(FileWriter fw = new FileWriter("Dongwoon Jeong List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if (Integer.parseInt(doctornumber) ==2) {
+			try(FileWriter fw = new FileWriter("Hoyong Lee List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if(Integer.parseInt(doctornumber) ==3) {
+			try(FileWriter fw = new FileWriter("Utsav Patel List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if(Integer.parseInt(doctornumber) ==4) {
+			try(FileWriter fw = new FileWriter("Tarun Patel List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if(Integer.parseInt(doctornumber) ==5) {
+			try(FileWriter fw = new FileWriter("Kevin Patel List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}	
 		try(FileWriter fw = new FileWriter("appointmentFile.txt", true);
 			       BufferedWriter bw = new BufferedWriter(fw);
 			       PrintWriter out = new PrintWriter(bw))
@@ -115,7 +170,7 @@ public class HospitalManagement {
 			   } catch (IOException e) {
 			       //exception handling left as an exercise for the reader
 			   }
-
+		
 		
 	}
 	
