@@ -5,14 +5,19 @@ public class Appointment {
 	private long appointmentId;
 	private String appointmentDate;
 	private Patient patient;
-	
-	public Appointment(Patient patient,String appointmentDate) {
+	private String doctorname;
+	public Appointment(Patient patient,String appointmentDate, String doctorname) {
 		this.patient = patient;
 		this.appointmentDate = appointmentDate;
+		this.doctorname = doctorname;
 	}
 	
 	public String getAppointmentDate() {
 		return this.appointmentDate;
+	}
+	
+	public String getDoctorName() {
+		return this.doctorname;
 	}
 	
 	public void setAppointmentDate(String appointmentDate) {
@@ -37,7 +42,7 @@ public class Appointment {
 	}
 	
 	public String toString() {
-		return String.format("%-20s/%-20s/%-20s",patient.getName(),patient.getSsn(),getAppointmentDate());
+		return String.format("%-20s/%-20s/%-20s/%-20s",patient.getName(),patient.getSsn(),getAppointmentDate(),getDoctorName());
 	}
 
 	

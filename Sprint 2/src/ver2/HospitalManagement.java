@@ -130,7 +130,7 @@ public class HospitalManagement {
 		System.out.println("New Appointment made\n\n");
 		
 		Patient newPatient = new Patient(name, age, gender, appointmentDate,ssn,address,dateOfbirth);
-		Appointment newAppointment = new Appointment(newPatient, appointmentDate);
+		Appointment newAppointment = new Appointment(newPatient, appointmentDate, doctorname);
 		
 		patientList.add(newPatient);
 		appointmentList.add(newAppointment);//
