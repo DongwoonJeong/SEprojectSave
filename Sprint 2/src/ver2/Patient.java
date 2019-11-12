@@ -24,6 +24,12 @@ public class Patient extends Person{
 		 this.DateOfBirth = DateOfBirth;
 	 }
 	 
+	 public Patient(String name, String ssn, String appointmentDate) {
+		 super.setName(name);
+		 this.ssn = ssn;
+		 this.appointmentDate = appointmentDate;
+	 }
+	 
 	 
 	 public String getSsn() {
 		 return ssn;
@@ -80,7 +86,7 @@ public class Patient extends Person{
 	 }
 */
 	public String toString() {
-		return String.format("patient name: %-12s /Age: %-5s/ Gender: %-4s/ Appointment Date: %-12s/ SSN: %-14s/ Address: %-24s/ Date Of Birth: %-24s"  
+		return String.format("%-16s /%-5s/%-7s/%-18s/%-18s/%-24s/%-16s"  
 				,getName(), getAge() , getGender() ,getAppointmentDate(), getSsn() , getAddress(), getDateOfBirth());
 	}
 
