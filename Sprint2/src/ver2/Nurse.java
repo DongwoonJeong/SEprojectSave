@@ -1,4 +1,9 @@
-package ver2;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Nurse {
@@ -11,7 +16,6 @@ public class Nurse {
 	public Set<Patient> getPatient(){
 		return this.patients;
 	}
-
 	@OneToMany(mappedBy = "nurse")
 	public Set<Doctor> getDoctors(){
 		return this.doctors;
