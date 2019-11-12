@@ -37,7 +37,7 @@ public class Appointment {
 	}
 	
 	public String toString() {
-		return String.format("patient name: %-12s / patient ssn: %-14s/ appointment date: %-10s",patient.getName(),patient.getSsn(),getAppointmentDate());
+		return String.format("%-20s/%-20s/%-20s",patient.getName(),patient.getSsn(),getAppointmentDate());
 	}
 
 	

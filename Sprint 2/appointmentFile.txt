@@ -1,3 +1,2 @@
-patient name: wwe          / patient ssn: 123309876     / appointment date: 09-12-2019
-patient name: urd          / patient ssn: 123445567     / appointment date: 11-20-2019
-patient name: hong         / patient ssn: 555553212     / appointment date: 10-10-2019
+patient name        /patient ssn         /appointment date    
+hoyong lee          /56035603            /10-20-2014          
