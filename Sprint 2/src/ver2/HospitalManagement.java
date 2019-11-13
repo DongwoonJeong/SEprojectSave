@@ -1,6 +1,7 @@
 package ver2;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.*;
 
 import java.io.*;
 
@@ -89,10 +90,57 @@ public class HospitalManagement {
 					String name = token[0].trim();
 					String ssn = token[1].trim();
 					String appointmentDate = token[2].trim();
-					
+					String doctorname = token[3].trim();
 					Patient patient = new Patient(name,ssn,appointmentDate);
 					
-					Appointment appointment = new Appointment(patient,appointmentDate);
+					Appointment appointment = new Appointment(patient,appointmentDate, doctorname);
+					appointmentsList.add(appointment);
+				}
+			}
+		}
+		catch(IOException e) {
+		}
+	
+		try {
+			File file = new File("Dongwoon Jeong List.txt");
+			Scanner input = new Scanner(file);
+		
+			if(file.exists()) {
+			
+				input.nextLine();
+				while (input.hasNextLine()) {
+					String line = input.nextLine();
+					String[] token = line.split("/");
+					String name = token[0].trim();
+					String ssn = token[1].trim();
+					String appointmentDate = token[2].trim();
+					String doctorname = token[3].trim();
+					Patient patient = new Patient(name,ssn,appointmentDate);
+					
+					Appointment appointment = new Appointment(patient,appointmentDate, doctorname);
+					appointmentsList.add(appointment);
+				}
+			}
+		}
+		catch(IOException e) {
+		}
+		try {
+			File file = new File("Hoyong Lee List.txt");
+			Scanner input = new Scanner(file);
+		
+			if(file.exists()) {
+			
+				input.nextLine();
+				while (input.hasNextLine()) {
+					String line = input.nextLine();
+					String[] token = line.split("/");
+					String name = token[0].trim();
+					String ssn = token[1].trim();
+					String appointmentDate = token[2].trim();
+					String doctorname = token[3].trim();
+					Patient patient = new Patient(name,ssn,appointmentDate);
+					
+					Appointment appointment = new Appointment(patient,appointmentDate, doctorname);
 					appointmentsList.add(appointment);
 				}
 			}
@@ -127,6 +175,30 @@ public class HospitalManagement {
 		System.out.println("Enter Date of Bitrh: ");
 		String dateOfbirth = input.nextLine();
 		
+		System.out.println("Choose a doctor you want to see");
+		System.out.println("1. Dongwoon Jeong");
+		System.out.println("2. Hoyong Lee");
+		System.out.println("3. Utsav Patel");
+		System.out.println("4. Tarun Patel");
+		System.out.println("5. Kevin Patel");
+		String doctornumber = input.next();
+		String doctorname =null;
+		if (Integer.parseInt(doctornumber) ==1) {
+			doctorname = "Dongwoon Jeong";
+		}
+		else if (Integer.parseInt(doctornumber) ==2) {
+			doctorname = "Hoyong Lee";
+		}
+		else if (Integer.parseInt(doctornumber) ==3) {
+			doctorname = "Utsav Patel";
+		}
+		else if (Integer.parseInt(doctornumber) ==4) {
+			doctorname = "Tarun Patel";
+		}
+		else if (Integer.parseInt(doctornumber) ==5) {
+			doctorname = "Kevin Patel";
+		}
+		
 		System.out.println("New Appointment made\n\n");
 		
 		Patient newPatient = new Patient(name, age, gender, appointmentDate,ssn,address,dateOfbirth);
@@ -154,7 +226,7 @@ public class HospitalManagement {
 			       PrintWriter out = new PrintWriter(bw))
 		{
 			//if (!((new File("patientsFile.txt")).exists()))
-				out.printf("patient name        /patient ssn         /appointment date    \n");
+				out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
 			
 			for (int i=0; i< appointmentList.size(); i++) {
 				out.println(appointmentList.get(i));
@@ -162,7 +234,57 @@ public class HospitalManagement {
 		} catch (IOException e) {
 			       //exception handling left as an exercise for the reader
 		}
-		
+	if (Integer.parseInt(doctornumber) ==1) {
+			try(FileWriter fw = new FileWriter("Dongwoon Jeong List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if (Integer.parseInt(doctornumber) ==2) {
+			try(FileWriter fw = new FileWriter("Hoyong Lee List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if(Integer.parseInt(doctornumber) ==3) {
+			try(FileWriter fw = new FileWriter("Utsav Patel List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if(Integer.parseInt(doctornumber) ==4) {
+			try(FileWriter fw = new FileWriter("Tarun Patel List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}else if(Integer.parseInt(doctornumber) ==5) {
+			try(FileWriter fw = new FileWriter("Kevin Patel List.txt", true);
+				       BufferedWriter bw = new BufferedWriter(fw);
+				       PrintWriter out = new PrintWriter(bw))
+				   {
+				out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
+				       out.println(newAppointment.toString());
+				   } catch (IOException e) {
+				       //exception handling left as an exercise for the reader
+				   }
+		}	
 	}
 	
 	public static void cancelAppointment(ArrayList<Appointment> appointmentsList){
@@ -181,10 +303,23 @@ public class HospitalManagement {
 			       PrintWriter out = new PrintWriter(bw))
 		{
 			//if (!((new File("patientsFile.txt")).exists()))
-				out.printf("patient name        /patient ssn         /appointment date    \n");
+			out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
 			
 			for (int i=0; i< appointmentsList.size(); i++) {
 				out.println(appointmentsList.get(i));
+			}
+		} catch (IOException e) {
+			       //exception handling left as an exercise for the reader
+		}
+		try(FileWriter fw2 = new FileWriter("Dongwoon Jeong List.txt");
+			       BufferedWriter bw2 = new BufferedWriter(fw2);
+			       PrintWriter out2 = new PrintWriter(bw2))
+		{
+			//if (!((new File("patientsFile.txt")).exists()))
+			out2.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
+			
+			for (int i=0; i< appointmentsList.size(); i++) {
+				out2.println(appointmentsList.get(i));
 			}
 		} catch (IOException e) {
 			       //exception handling left as an exercise for the reader
@@ -210,7 +345,7 @@ public class HospitalManagement {
 			       PrintWriter out = new PrintWriter(bw))
 		{
 			//if (!((new File("patientsFile.txt")).exists()))
-				out.printf("patient name        /patient ssn         /appointment date    \n");
+			out.printf("patient name        /patient ssn         /appointment date    /with doctor \n");
 			
 			for (int i=0; i< appointmentsList.size(); i++) {
 				out.println(appointmentsList.get(i));

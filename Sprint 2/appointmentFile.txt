@@ -1,2 +1,5 @@
-patient name        /patient ssn         /appointment date    
-hoyong lee          /56035603            /10-20-2014          
+patient name        /patient ssn         /appointment date    /with doctor 
+1                   /1                   /1                   /Dongwoon Jeong      
+3                   /3                   /3                   /Utsav Patel         
+1                   /1                   /1                   /Dongwoon Jeong      
+3                   /3                   /3                   /Utsav Patel         
