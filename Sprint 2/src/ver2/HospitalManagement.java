@@ -87,13 +87,13 @@ public class HospitalManagement {
 		
 		try {
 			File file = new File("appointmentFile.txt");
-			Scanner input = new Scanner(file);
+			Scanner input2 = new Scanner(file);
 		
 			if(file.exists()) {
 			
-				input.nextLine();
-				while (input.hasNextLine()) {
-					String line = input.nextLine();
+				input2.nextLine();
+				while (input2.hasNextLine()) {
+					String line = input2.nextLine();
 					String[] token = line.split("/");
 					String name = token[0].trim();
 					String ssn = token[1].trim();
@@ -160,7 +160,7 @@ public class HospitalManagement {
 			doctorname = "Kevin Patel";
 		}
 		
-		System.out.println("New Appointment made\n\n");
+		System.out.println("New Appointment made\n");
 		
 		Patient newPatient = new Patient(name, age, gender, appointmentDate,ssn,address,dateOfbirth);
 		Appointment newAppointment = new Appointment(newPatient, appointmentDate, doctorname);
