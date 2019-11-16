@@ -12,9 +12,10 @@ public class Patient extends Person{
 	 private ArrayList<Appointment> appointment;
 	 private ArrayList<Doctor> doctor;
 	 private String DateOfBirth;
+	 private String prescriptions;
 	
 	 // constructors
-	 public Patient(String name,int age, String gender,String appointmentDate,String ssn,String address , String DateOfBirth) {
+	 public Patient(String name,int age, String gender,String appointmentDate,String ssn,String address , String DateOfBirth, String prescriptions) {
 		 super.setName(name);
 		 super.setAge(age);
 		 super.setGender(gender);
@@ -22,6 +23,7 @@ public class Patient extends Person{
 		 this.ssn = ssn;
 		 this.address = address;
 		 this.DateOfBirth = DateOfBirth;
+		 this.prescriptions= prescriptions;
 	 }
 	 
 	 
@@ -37,6 +39,9 @@ public class Patient extends Person{
 		 return appointmentDate;
 	 }
 	 
+	 public String getPrescriptions() {
+		 return prescriptions;
+	 }
 	 //@ManyToMany(mappedBy = "Patient")
 	 public ArrayList<Appointment> getAppointment(){
 		 return this.appointment;
@@ -55,6 +60,10 @@ public class Patient extends Person{
 		}
 	 public String getDateOfBirth() {
 		 	return DateOfBirth;
+	 }
+	 
+	 public void setPrescriptions(ArrayList<Doctor> doctor) {
+		 this.prescriptions = prescriptions;
 	 }
 	 
   /* 

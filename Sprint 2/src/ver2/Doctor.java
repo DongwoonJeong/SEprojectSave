@@ -8,7 +8,8 @@ public class Doctor extends Person {
 	private ArrayList<Patient> patients;
 	
 	private ArrayList<Receptionist> receptionists;
-	
+
+	String Prescriptions;
 	public Doctor(String name) {
 		super.setName(name);
 	}
@@ -22,7 +23,8 @@ public class Doctor extends Person {
 		return this.receptionists;
 	}
 	
-	public void getPrescriptions() {
+	public void getPrescriptions(String Prescriptions) {
+	     this.getPrescriptions(Prescriptions);
 	}
 	
 	public String toString() {

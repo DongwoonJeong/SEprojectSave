@@ -7,6 +7,7 @@ public class Receptionist extends Person{
 	private ArrayList<Patient> patients;
 	private ArrayList<Doctor> doctors;
 	
+	
 	Receptionist(String name){
 		super.setName(name);
 	}
@@ -22,6 +23,9 @@ public class Receptionist extends Person{
 	}
 	
 	public void setPatients(ArrayList<Patient> patients) {
+		this.patients = patients;
+	}
+	public void setPrescriptions(ArrayList<Patient> prescriptions) {
 		this.patients = patients;
 	}
 	

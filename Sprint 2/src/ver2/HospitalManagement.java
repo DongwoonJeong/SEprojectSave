@@ -178,4 +178,6 @@ public class HospitalManagement {
 	public static void changeAppointmentDate(ArrayList<Patient> patients, ArrayList<Appointment> appointments) {
 		
 	}
+	
+	public static void getPatientPrescriptions (ArrayList<Patient> patients)
 }
