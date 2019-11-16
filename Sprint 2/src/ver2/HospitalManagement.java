@@ -16,7 +16,41 @@ public class HospitalManagement {
 		ArrayList<Appointment> appointments = new ArrayList<Appointment>();
 		
 		readData(patients,appointments);
+		readData(patients,appointments);
+		while (true) {
+		System.out.println("welcome to South Gerogia Hospital management systems:   \n"
+		                   +  "Please select choices from the above options:  \n"
+				           +   "press 1 for Doctor:   \n "
+		                   +   "press 2 for Receptionist:  \n"
+				           +   "press 3 for Patient:    \n"
+		                   +   "Press 4 for nurse:     \n"
+				           +   "press 5 to Exit  \n"
+				);
+		System.out.println(); 
+		System.out.println("Please enter your choice : ");
+		int choice =  input.nextInt();
+		switch(choice) {
+	     
+		case 1: System.out.println(" Welcome to Doctor section");
 		
+		break;
+		
+		case 2: System.out.println("welcome to  Receptionist section: ");
+		
+		break;
+		
+       case 3: System.out.println(" Welcome to Patient section ");
+       
+		
+		break;
+        
+       case 4: System.out.println(" Welcome to Nurse section ");
+		
+		break;
+        
+		default: System.out.println("Incorrect choice !!! Try again");
+		
+		}
 		//what do you want to do?
 		while (true) {
 		System.out.println("What do you want to do: \n"
