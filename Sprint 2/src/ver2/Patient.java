@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Patient extends Person{
 
 	// instance variables 
-	private int dateOfBirth;
+	private int dateOfbirth;
 	private String ssn;
 	private String address;
 	private String appointmentDate;
