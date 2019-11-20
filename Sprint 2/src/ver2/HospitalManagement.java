@@ -7,9 +7,9 @@ import java.io.*;
 public class HospitalManagement {
 
 	public static void main(String[] args) throws Exception{
-		
+		givePresciption();
 		//Scanner 
-		Scanner input = new Scanner(System.in);
+		/*Scanner input = new Scanner(System.in);
 		
 		//patients and appointments list
 		ArrayList<Patient> patients = new ArrayList<Patient>();
@@ -45,11 +45,36 @@ public class HospitalManagement {
 		}
 		
 		System.out.println("completed succesfully");
-
+*/
 	}
 
-	
-	public static void readData(ArrayList<Patient> patientsList,ArrayList<Appointment> appointmentsList) throws Exception{
+	public static void givePresciption () throws FileNotFoundException {
+		System.out.println("Welcome Doctor To Prescription Column");
+		String correct;
+		do {
+		File file = new File("patientFile.txt"); 
+	    Scanner scan = new Scanner(file); 
+	  
+	    while (scan.hasNextLine()) 
+	      System.out.println(scan.nextLine()); 
+	    System.out.println();
+	    System.out.println("Please enter the patient name from the Patient File to start? ");
+	    Scanner input = new Scanner(System.in);
+	System.out.println("Enter a patient name: ");
+	String name = input.next();	
+	System.out.println("Please enter the patient age from the Patient File ? ");
+    Scanner input2 = new Scanner(System.in);
+    System.out.println("Enter the patient ssn: ");
+    String ssn = input.next();
+    System.out.println("Is the patient that needs medication correct? ");
+    System.out.println("Name: " + name );
+    System.out.println("SSN: " + ssn );
+    System.out.println("Enter Yes if (correct) or NO(if its wrong)? ");
+     correct = input.next();
+		}
+		while (correct.equals("NO"));
+	}
+	/*public static void readData(ArrayList<Patient> patientsList,ArrayList<Appointment> appointmentsList) throws Exception{
 		try {
 			File file = new File("patientFile.txt");
 			Scanner input = new Scanner(file);
@@ -218,5 +243,5 @@ public class HospitalManagement {
 		} catch (IOException e) {
 			       //exception handling left as an exercise for the reader
 		}
-	}
+	}*/
 }

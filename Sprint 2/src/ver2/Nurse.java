@@ -17,7 +17,6 @@ public class Nurse {
 	public Set<Patient> getPatient(){
 		return this.patients;
 	}
-
 	@OneToMany(mappedBy = "nurse")
 	public Set<Doctor> getDoctors(){
 		return this.doctors;
