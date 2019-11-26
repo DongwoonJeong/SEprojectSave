@@ -1,5 +1,4 @@
-patient name        /patient ssn         /appointment date    /with doctor 
+patient name    /patient ssn       /appointment date /with doctor    
 1                   /1                   /1                   /Dongwoon Jeong      
-3                   /3                   /3                   /Utsav Patel         
 1                   /1                   /1                   /Dongwoon Jeong      
-3                   /3                   /3                   /Utsav Patel         
+3                   /3                   /3                   /Dongwoon Jeong      

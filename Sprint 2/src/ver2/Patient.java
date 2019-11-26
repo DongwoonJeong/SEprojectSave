@@ -86,8 +86,7 @@ public class Patient extends Person{
 	 }
 */
 	public String toString() {
-		return String.format("%-16s /%-5s/%-7s/%-18s/%-18s/%-24s/%-16s"  
-				,getName(), getAge() , getGender() ,getAppointmentDate(), getSsn() , getAddress(), getDateOfBirth());
+		return String.format("%-16s/%-5s/%-7s/%-18s/%-18s/%-24s/%-16s",getName(), getAge() , getGender() ,getAppointmentDate(), getSsn() , getAddress(), getDateOfBirth());
 	}
 
 
