@@ -1,4 +1,5 @@
 package ver2;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Doctor extends Person {
@@ -22,14 +23,17 @@ public class Doctor extends Person {
 		return this.receptionists;
 	}
 	
-	public void getPrescriptions() {
+	public void getPrescriptions()throws FileNotFoundException {
+		
+		HospitalManagement HospitalManagementObject = new HospitalManagement();
+		HospitalManagementObject.getPatientPrescriptions();
 	}
 	
 	public String toString() {
 		return "Doctor: "+ getName();
 	}
-	public void Note (String Notes) {
-		this.setNotes(Notes);
+	public void Note (String Notes)  {
+		
 	}
 	public String getNotes() {
 		return notes;
