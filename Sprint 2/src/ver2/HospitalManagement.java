@@ -7,7 +7,7 @@ import java.io.*;
 public class HospitalManagement {
 
 	public static void main(String[] args) throws Exception{
-		givePresciption();
+		getPatientPrescriptions();
 		//Scanner 
 		/*Scanner input = new Scanner(System.in);
 		
@@ -48,32 +48,85 @@ public class HospitalManagement {
 */
 	}
 
-	public static void givePresciption () throws FileNotFoundException {
-		System.out.println("Welcome Doctor To Prescription Column");
+	public static void getPatientPrescriptions() throws FileNotFoundException{
 		String correct;
 		do {
-		File file = new File("patientFile.txt"); 
-	    Scanner scan = new Scanner(file); 
-	  
-	    while (scan.hasNextLine()) 
-	      System.out.println(scan.nextLine()); 
-	    System.out.println();
-	    System.out.println("Please enter the patient name from the Patient File to start? ");
-	    Scanner input = new Scanner(System.in);
-	System.out.println("Enter a patient name: ");
-	String name = input.next();	
-	System.out.println("Please enter the patient age from the Patient File ? ");
-    Scanner input2 = new Scanner(System.in);
-    System.out.println("Enter the patient ssn: ");
-    String ssn = input.next();
-    System.out.println("Is the patient that needs medication correct? ");
-    System.out.println("Name: " + name );
-    System.out.println("SSN: " + ssn );
-    System.out.println("Enter Yes if (correct) or NO(if its wrong)? ");
-     correct = input.next();
+		File infile = new File ("appointmentFile.txt");
+		Scanner scan = new Scanner(infile);
+
+		while (scan.hasNext())
+			System.out.println(scan.nextLine());
+		System.out.println();
+		System.out.println("Welcome Doctor To Prescription Column");
+		System.out.println("Please enter the patient name from AppointmentFile for  getting their prescriptions?");
+		Scanner input = new Scanner(System.in);
+		String result = input.next();
+
+		System.out.println("Choice - 1 : Patient has injury");
+		System.out.println("Choice - 2 : Patient has illness");
+		System.out.println("Choice - 3 : Or Other Reason");
+		System.out.println("Any other Choice : patient prescription not found");
+		System.out.println("Please enter the Patient problem from the above list so doctor can prescribe medication for that problem");
+		
+		 
+		int options = input.nextInt();
+		if (options ==1) {
+			System.out.println("Which injury has the patient needs to be prescirbed for ");
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter reason for which  prescription is needed: ");
+			String reason = sc.nextLine();
+			System.out.println("Patient: " + result+ " Has following problem which needs prescibed: " + reason);
+			String textToAppend = "Patient name: " + result + " The Reason: "+ reason;
+
+			try {
+				BufferedWriter writer = new BufferedWriter(new FileWriter("PatientPrescriptions.txt", true));
+				writer.newLine();
+				writer.write(textToAppend);
+				writer.close();
+			}
+			catch (IOException e) {
+
+			}
+			if (options ==2) {
+				System.out.println("which kind of illnes patient wants to get prescribed" ); 
+				Scanner sc1 = new Scanner(System.in);
+				System.out.println("Enter reason which needs prescription for: ");
+				String reason1 = sc1.nextLine();
+				System.out.println("Patient: " + result + " Has following problem which needs prescibed: " + reason1);
+				String textToAppend1 = "Patient name: " + result + " The Reason: "+ reason1;
+				try{
+					BufferedWriter writer = new BufferedWriter(new FileWriter("PatientPrescriptions.txt", true)); 
+					writer.newLine();   //Add new line
+					writer.write(textToAppend1);
+					writer.close();
+				} catch (IOException e){
+				}
+				if (options ==3) {
+					System.out.println("Which other reason the pateint needs prescription for:  ");
+					Scanner sc2 = new Scanner(System.in);
+					System.out.println("Enter reason which needs prescription for: ");
+					String reason2 = sc1.nextLine();
+					System.out.println("Patient: " + result + " Has following problem which needs prescibed: " + reason1);
+					String textToAppend3 = "Patient name: " + result + " The Reason: "+ reason1;
+					try{
+						BufferedWriter writer = new BufferedWriter(new FileWriter("patientPrescriptions.txt", true)); 
+						writer.newLine();   //Add new line
+						writer.write(textToAppend);
+						writer.close();
+					} catch (IOException e){
+					}
+
+				}
+			}
+
+
+		}
+		 System.out.println("Enter Yes if (correct) or NO(if its wrong)? ");
+	     correct = input.next();
 		}
 		while (correct.equals("NO"));
 	}
+
 	/*public static void readData(ArrayList<Patient> patientsList,ArrayList<Appointment> appointmentsList) throws Exception{
 		try {
 			File file = new File("patientFile.txt");
