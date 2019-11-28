@@ -19,7 +19,9 @@ public class DoctorManagemet {
 	  { 
 
 	      writeNotesAsInstructed();
+
 	      chargeFees();
+
 	}
 	public static void writeNotesAsInstructed() throws FileNotFoundException{
 		File file = new File("appointmentFile.txt"); 
@@ -186,5 +188,6 @@ public class DoctorManagemet {
 			
 		}
 	}
+
 
 }
