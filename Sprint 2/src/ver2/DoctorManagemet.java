@@ -33,7 +33,7 @@ public class DoctorManagemet {
 			String name = input.next();	
 			
 	            System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
-	            System.out.println("Choice - 2 : Do you want to write a presistion"); 
+	            System.out.println("Choice - 2 : Do you want to write a prescription"); 
 	            
 
 			int choice = input.nextInt();		
