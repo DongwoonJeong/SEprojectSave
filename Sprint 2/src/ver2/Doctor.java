@@ -41,5 +41,9 @@ public class Doctor extends Person {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
+	public void chargeFees() throws FileNotFoundException {
+		DoctorManagemet DoctorManagemetObject = new DoctorManagemet();
+		DoctorManagemetObject.chargeFees();
+	}
 	
 }

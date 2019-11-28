@@ -62,6 +62,7 @@ public class Patient extends Person{
 	 public String getDateOfBirth() {
 		 	return DateOfBirth;
 	 }
+	
 	 
   /* 
 	 private Receptionist receptionist;
