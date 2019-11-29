@@ -19,6 +19,9 @@ public class DoctorManagemet {
 	  { 
 
 	      writeNotesAsInstructed();
+
+	      chargeFees();
+
 	}
 	public static void writeNotesAsInstructed() throws FileNotFoundException{
 		File file = new File("appointmentFile.txt"); 
@@ -82,6 +85,109 @@ public class DoctorManagemet {
 			
 		}
 
-	
+	public static void chargeFees() throws FileNotFoundException{
+		System.out.println("Welcome to Fee Manager");
+		System.out.println("Based on doctorNotes the following charges are presented. ");
+		File file = new File("doctorNotes.txt"); 
+	    Scanner scan = new Scanner(file); 
+	  
+	    while (scan.hasNextLine()) 
+	      System.out.println(scan.nextLine()); 
+	System.out.println();
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a patient name to send billing? ");
+		String name = input.next();		
+		System.out.println("The Regular Price is 45$ ");
+		System.out.println("This price is just for doctor visit the treatments will be charges based on symptons");
+		System.out.println("Enter a patient name to send billing? " + name);
+		System.out.println("Option - 1 : Regular Price + Billing for Injuries");
+		System.out.println("Option - 2 : Regualar Price + Billing for Illness");
+		System.out.println("Option - 3 : Regular Price ");
+		System.out.println("Any other Option is not validated and terminated");
+		System.out.println("From Option pick one : ");
+		
+		int Option = input.nextInt();	
+		if (Option == 3) {
+			System.out.println("The Regular price is charged only");
+			System.out.println(name + " has Bill of $ 45");
+			
+		}
+		if (Option == 1) {
+			System.out.println("Please pick injury from the below list");
+			System.out.println("1: Shoulder Injury");
+			System.out.println("2: Hamstring Injury");
+			System.out.println("3: Groin Pull Injury");
+			System.out.println("Any other Option is not validated and terminated");
+			int pick = input.nextInt();
+			if (pick ==1) {
+				System.out.println("Shoulder Injury");
+				int num1 = 500, num2 = 45, sum;
+				sum = num1 + num2;
+			System.out.println(name + " has Bill of $ "+ sum);
+			System.out.println("The Regular price: 45$");
+			System.out.println("Injury Cost: 500$");
+			}
+			if (pick ==2) {
+				System.out.println("Hamstring");
+				int num1 = 600, num2 = 45, sum;
+				sum = num1 + num2;
+			System.out.println(name + " has Bill of $ "+ sum);
+			System.out.println("The Regular price: 45$");
+			System.out.println("Injury Cost: 600$");
+			} 
+			if (pick ==3) {
+				System.out.println("Groin Pull");
+				int num1 = 700, num2 = 45, sum;
+				sum = num1 + num2;
+			System.out.println(name + " has Bill of $ "+ sum);
+			System.out.println("The Regular price: 45$");
+			System.out.println("Injury Cost: 700$");
+			}
+			
+		}
+		if (Option == 2) {
+			System.out.println("Please pick Illness from the below list");
+			System.out.println("1: Flu");
+			System.out.println("2: Sore Throat");
+			System.out.println("3: Cough");
+			System.out.println("4: Ear Pain");
+			System.out.println("Any other Option is not validated and terminated");
+			int pick = input.nextInt();
+			if (pick ==1) {
+				System.out.println("Flu");
+				int num1 = 100, num2 = 45, sum;
+				sum = num1 + num2;
+			System.out.println(name + " has Bill of $ "+ sum);
+			System.out.println("The Regular price: 45$");
+			System.out.println("Injury Cost: 100$");
+			}
+			if (pick ==2) {
+				System.out.println("Sore Throat");
+				int num1 = 55, num2 = 45, sum;
+				sum = num1 + num2;
+			System.out.println(name + " has Bill of $ "+ sum);
+			System.out.println("The Regular price: 45$");
+			System.out.println("Injury Cost: 55$");
+			} 
+			if (pick ==3) {
+				System.out.println("Cough");
+				int num1 = 85, num2 = 45, sum;
+				sum = num1 + num2;
+			System.out.println(name + " has Bill of $ "+ sum);
+			System.out.println("The Regular price: 45$");
+			System.out.println("Injury Cost: 85$");
+			}
+			if (pick ==4) {
+				System.out.println("Ear Pain");
+				int num1 = 155, num2 = 45, sum;
+				sum = num1 + num2;
+			System.out.println(name + " has Bill of $ "+ sum);
+			System.out.println("The Regular price: 45$");
+			System.out.println("Injury Cost: 155$");
+			}
+			
+		}
+	}
+
 
 }
