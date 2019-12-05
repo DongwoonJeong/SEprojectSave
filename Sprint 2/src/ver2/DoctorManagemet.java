@@ -19,9 +19,7 @@ public class DoctorManagemet {
 	  { 
 
 	      writeNotesAsInstructed();
-
 	      chargeFees();
-
 	}
 	public static void writeNotesAsInstructed() throws FileNotFoundException{
 		File file = new File("appointmentFile.txt"); 
@@ -30,60 +28,288 @@ public class DoctorManagemet {
 				    while (scan.hasNextLine()) 
 				      System.out.println(scan.nextLine()); 
 	       System.out.println();
-	     System.out.println("Please enter the patient name from the AppointmentFile to add notes? ");
-			Scanner input = new Scanner(System.in);
-			System.out.println("Enter a patient name: ");
-			String name = input.next();	
+	       System.out.println("This are the list of avaiable doctors");
+	       System.out.println("1. Dongwoon Jeong");
+			System.out.println("2. Hoyong Lee");
+			System.out.println("3. Utsav Patel");
+			System.out.println("4. Tarun Patel");
+			System.out.println("5. Kevin Patel");
+			System.out.println("Please enter the correct doctor from the AppointmentFile to add notes? ");
+			System.out.println("By entering Number correspoding to that Doctor ");
 			
-	            System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
-	            System.out.println("Choice - 2 : Do you want to write a prescription"); 
-	            
+	     Scanner input = new Scanner(System.in);
+	     int Option = input.nextInt();
+	     if (Option == 1) {
+	    	 System.out.println("Enter a patient name: ");
+				String name = input.next();	
+				
+				
+				
+		            System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
+		            System.out.println("Choice - 2 : Do you want to write a prescription"); 
+		            
 
-			int choice = input.nextInt();		
-	      if  (choice == 1){
-	        System.out.printf("Enter the Diagnosis:");
-	       Scanner sc = new Scanner(System.in);
-			String reason = sc.nextLine();
-			String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
-	      try{
-	       BufferedWriter writer = new BufferedWriter(
-	       
-		                                new FileWriter("doctorNotes.txt", true)  
-		                            ); 
-	                               	    writer.newLine();   //Add new line
-		    writer.write(textToAppend);
-		    writer.close();
-		   
-	       } catch (IOException e){
-	    	     
-	    	   
-	                               }
-	 
-             System.out.printf("The diagnosis has been saved ");
-	      }	
-	        if  (choice == 2){
-	       System.out.println("What presistion do you want to prescribe for the Patient");
-	       Scanner sc = new Scanner(System.in);
-			System.out.println("Enter reason which needs prescription for: ");
-	      String reason = sc.nextLine();
-	      System.out.println("Patient: " + name + " Has following problem which needs prescibed: " + reason);
-	       String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
-	      try{
-	       BufferedWriter writer = new BufferedWriter(
-	       
-		                                new FileWriter("doctorNotes.txt", true)  
-		                            ); 
-	                               	    writer.newLine();   //Add new line
-		    writer.write(textToAppend);
-		    writer.close();
-	       } catch (IOException e){
-	                               }
+				int choice = input.nextInt();		
+		      if  (choice == 1){
+		        System.out.printf("Enter the Diagnosis:");
+		       Scanner sc = new Scanner(System.in);
+				String reason = sc.nextLine();
+				String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Dongwoon Jeong List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+			   
+		       } catch (IOException e){
+		    	     
+		    	   
+		                               }
+		 
+	             System.out.printf("The diagnosis has been saved ");
+		      }	
+		        if  (choice == 2){
+		       System.out.println("What presistion do you want to prescribe for the Patient");
+		       Scanner sc = new Scanner(System.in);
+				System.out.println("Enter reason which needs prescription for: ");
+		      String reason = sc.nextLine();
+		      System.out.println("Patient: " + name + " Has following problem which needs prescibed: " + reason);
+		       String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Dongwoon Jeong List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+		       } catch (IOException e){
+		                               }
 
-	      }
-	       
-	       
-			
-		}
+		        }
+	 		
+	 	}
+	     if (Option == 2) {
+	    	 System.out.println("Enter a patient name: ");
+				String name = input.next();	
+				
+				
+				
+		            System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
+		            System.out.println("Choice - 2 : Do you want to write a prescription"); 
+		            
+
+				int choice = input.nextInt();		
+		      if  (choice == 1){
+		        System.out.printf("Enter the Diagnosis:");
+		       Scanner sc = new Scanner(System.in);
+				String reason = sc.nextLine();
+				String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Hoyong Lee List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+			   
+		       } catch (IOException e){
+		    	     
+		    	   
+		                               }
+		 
+	             System.out.printf("The diagnosis has been saved ");
+		      }	
+		        if  (choice == 2){
+		       System.out.println("What presistion do you want to prescribe for the Patient");
+		       Scanner sc = new Scanner(System.in);
+				System.out.println("Enter reason which needs prescription for: ");
+		      String reason = sc.nextLine();
+		      System.out.println("Patient: " + name + " Has following problem which needs prescibed: " + reason);
+		       String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Hoyong Lee List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+		       } catch (IOException e){
+		                               }
+
+		        }
+	 		
+	 	}
+	     if (Option == 3) {
+	    	 System.out.println("Enter a patient name: ");
+				String name = input.next();	
+				
+				
+				
+		            System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
+		            System.out.println("Choice - 2 : Do you want to write a prescription"); 
+		            
+
+				int choice = input.nextInt();		
+		      if  (choice == 1){
+		        System.out.printf("Enter the Diagnosis:");
+		       Scanner sc = new Scanner(System.in);
+				String reason = sc.nextLine();
+				String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Utsav Patel List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+			   
+		       } catch (IOException e){
+		    	     
+		    	   
+		                               }
+		 
+	             System.out.printf("The diagnosis has been saved ");
+		      }	
+		        if  (choice == 2){
+		       System.out.println("What presistion do you want to prescribe for the Patient");
+		       Scanner sc = new Scanner(System.in);
+				System.out.println("Enter reason which needs prescription for: ");
+		      String reason = sc.nextLine();
+		      System.out.println("Patient: " + name + " Has following problem which needs prescibed: " + reason);
+		       String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Utsav Patel List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+		       } catch (IOException e){
+		                               }
+
+		        }
+	 		
+	 	}
+	     if (Option == 4) {
+	    	 System.out.println("Enter a patient name: ");
+				String name = input.next();	
+				
+				
+				
+		            System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
+		            System.out.println("Choice - 2 : Do you want to write a prescription"); 
+		            
+
+				int choice = input.nextInt();		
+		      if  (choice == 1){
+		        System.out.printf("Enter the Diagnosis:");
+		       Scanner sc = new Scanner(System.in);
+				String reason = sc.nextLine();
+				String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Tarun Patel List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+			   
+		       } catch (IOException e){
+		    	     
+		    	   
+		                               }
+		 
+	             System.out.printf("The diagnosis has been saved ");
+		      }	
+		        if  (choice == 2){
+		       System.out.println("What presistion do you want to prescribe for the Patient");
+		       Scanner sc = new Scanner(System.in);
+				System.out.println("Enter reason which needs prescription for: ");
+		      String reason = sc.nextLine();
+		      System.out.println("Patient: " + name + " Has following problem which needs prescibed: " + reason);
+		       String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Tarun Patel List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+		       } catch (IOException e){
+		                               }
+
+		        }
+	 		
+	 	}
+	     if (Option == 5) {
+	    	 System.out.println("Enter a patient name: ");
+				String name = input.next();	
+				
+				
+				
+		            System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
+		            System.out.println("Choice - 2 : Do you want to write a prescription"); 
+		            
+
+				int choice = input.nextInt();		
+		      if  (choice == 1){
+		        System.out.printf("Enter the Diagnosis:");
+		       Scanner sc = new Scanner(System.in);
+				String reason = sc.nextLine();
+				String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Kevin Patel List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+			   
+		       } catch (IOException e){
+		    	     
+		    	   
+		                               }
+		 
+	             System.out.printf("The diagnosis has been saved ");
+		      }	
+		        if  (choice == 2){
+		       System.out.println("What presistion do you want to prescribe for the Patient");
+		       Scanner sc = new Scanner(System.in);
+				System.out.println("Enter reason which needs prescription for: ");
+		      String reason = sc.nextLine();
+		      System.out.println("Patient: " + name + " Has following problem which needs prescibed: " + reason);
+		       String textToAppend = "Patient name: " + name + " The Reason: "+ reason;
+		      try{
+		       BufferedWriter writer = new BufferedWriter(
+		       
+			                                new FileWriter("Kevin Patel List.txt", true)  
+			                            ); 
+		                               	    writer.newLine();   //Add new line
+			    writer.write(textToAppend);
+			    writer.close();
+		       } catch (IOException e){
+		                               }
+
+		        }
+	 		
+	 	}
+	     else {
+	    	 System.out.println("The choices in incorrect and not given, Try again");
+	    	 
+	     }
+	     
+}
 
 	public static void chargeFees() throws FileNotFoundException{
 		System.out.println("Welcome to Fee Manager");
@@ -188,6 +414,5 @@ public class DoctorManagemet {
 			
 		}
 	}
-
 
 }
