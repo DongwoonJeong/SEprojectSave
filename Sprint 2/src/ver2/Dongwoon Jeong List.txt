@@ -3,3 +3,5 @@ je                  /jsdf                /18
 Patient name: je The Reason: ksdjffjkdf
 Patient name: jee The Reason: fdsj
 Patient name: dfa The Reason: fgf
+Patient name: joe The Reason: he has sick
+Patient name: gogo The Reason: go away

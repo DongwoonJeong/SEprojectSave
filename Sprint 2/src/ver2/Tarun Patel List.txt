@@ -1,3 +1,7 @@
 4                   /1256                /0554                
 
-Patient name: tarun The Reason: nice
+Patient name: tarun The Reason: nicebig                 /123456789           /01-21-1885          
+joe                 /123456789           /01-58-285           
+
+Patient name: joe The Reason: He has fever
+Patient name: Nimby The Reason: Arm injury
