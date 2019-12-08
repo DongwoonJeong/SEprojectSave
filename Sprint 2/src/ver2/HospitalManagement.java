@@ -19,6 +19,7 @@ public class HospitalManagement {
 		readData(patients,appointments);
 		boolean amty = false;
 		//what do you want to do?
+		
 		while (true) {
 		System.out.println("What do you want to do: \n"
 				+ "1. Make a new appointment\n"
