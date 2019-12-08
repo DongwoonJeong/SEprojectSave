@@ -8,15 +8,13 @@ import java.io.*;
 public class HospitalManagement {
 
 	public static void main(String[] args) throws Exception{
-		
-		//Scanner 
-		Scanner input = new Scanner(System.in);
-		
+		Scanner input = new Scanner(System.in);//Scanner
 		//patients and appointments list
 		ArrayList<Patient> patients = new ArrayList<Patient>();
 		ArrayList<Appointment> appointments = new ArrayList<Appointment>();
-		
+		//read data from txt files
 		readData(patients,appointments);
+		
 		boolean amty = false;
 		//what do you want to do?
 		while (true) {
