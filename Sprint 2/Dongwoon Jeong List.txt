@@ -1,18 +1,3 @@
-patient name    /patient ssn       /appointment date /with doctor 
+patient name    /patient ssn       /appointment date       /with doctor 
+1                   /1              /1              /Dongwoon Jeong
 
-patient name    /patient ssn       /appointment date /with doctor 
-
-patient name    /patient ssn       /appointment date /with doctor 
-
-patient name    /patient ssn       /appointment date /with doctor 
-1                   /1                   /1                   /Dongwoon Jeong      
-
-patient name    /patient ssn       /appointment date /with doctor 
-2                   /2                   /2                   /Dongwoon Jeong      
-
-patient name    /patient ssn       /appointment date /with doctor 
-1                   /1                   /1                   /Dongwoon Jeong      
-patient name    /patient ssn       /appointment date /with doctor 
-1                   /1                   /1                   /Dongwoon Jeong      
-patient name    /patient ssn       /appointment date /with doctor 
-3                   /3                   /3                   /Dongwoon Jeong      

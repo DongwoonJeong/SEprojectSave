@@ -46,7 +46,7 @@ public class HospitalManagement {
             System.out.println("There is no appointment\n"); 
 			}else {
 			System.out.println("patient name     /patient ssn      /appointment date    /with doctor \n");
-			System.out.println(appointments);
+			System.out.println(appointments+"\n");
 			}
 		}//break
 		if (action == 5 )
@@ -187,7 +187,7 @@ public class HospitalManagement {
 			       PrintWriter out = new PrintWriter(bw))
 		{
 			//if (!((new File("patientsFile.txt")).exists()))
-				out.printf("patient name    /patient ssn       /appointment date /with doctor    \n");
+				out.printf("patient name    /patient ssn       /appointment date       /with doctor    \n");
 			
 			for (int i=0; i< appointmentList.size(); i++) {
 				out.println(appointmentList.get(i));
@@ -201,7 +201,7 @@ public class HospitalManagement {
 				       BufferedWriter bw = new BufferedWriter(fw);
 				       PrintWriter out = new PrintWriter(bw))
 				   {
-				out.printf("patient name    /patient ssn       /appointment date /with doctor \n");
+				out.printf("patient name    /patient ssn       /appointment date       /with doctor \n");
 				       out.println(newAppointment.toString());
 				   } catch (IOException e) {
 				       //exception handling left as an exercise for the reader
@@ -211,7 +211,7 @@ public class HospitalManagement {
 				       BufferedWriter bw = new BufferedWriter(fw);
 				       PrintWriter out = new PrintWriter(bw))
 				   {
-				out.printf("patient name    /patient ssn       /appointment date /with doctor \n");
+				out.printf("patient name    /patient ssn       /appointment date       /with doctor \n");
 				       out.println(newAppointment.toString());
 				   } catch (IOException e) {
 				       //exception handling left as an exercise for the reader
@@ -221,7 +221,7 @@ public class HospitalManagement {
 				       BufferedWriter bw = new BufferedWriter(fw);
 				       PrintWriter out = new PrintWriter(bw))
 				   {
-				out.printf("patient name    /patient ssn       /appointment date /with doctor \n");
+				out.printf("patient name    /patient ssn       /appointment date       /with doctor \n");
 				       out.println(newAppointment.toString());
 				   } catch (IOException e) {
 				       //exception handling left as an exercise for the reader
@@ -231,7 +231,7 @@ public class HospitalManagement {
 				       BufferedWriter bw = new BufferedWriter(fw);
 				       PrintWriter out = new PrintWriter(bw))
 				   {
-				out.printf("patient name    /patient ssn       /appointment date /with doctor \n");
+				out.printf("patient name    /patient ssn       /appointment date       /with doctor \n");
 				       out.println(newAppointment.toString());
 				   } catch (IOException e) {
 				       //exception handling left as an exercise for the reader
@@ -241,7 +241,7 @@ public class HospitalManagement {
 				       BufferedWriter bw = new BufferedWriter(fw);
 				       PrintWriter out = new PrintWriter(bw))
 				   {
-				out.printf("patient name    /patient ssn       /appointment date /with doctor \n");
+				out.printf("patient name    /patient ssn       /appointment date       /with doctor \n");
 				       out.println(newAppointment.toString());
 				   } catch (IOException e) {
 				       //exception handling left as an exercise for the reader
@@ -265,7 +265,7 @@ public class HospitalManagement {
 			       PrintWriter out = new PrintWriter(bw))
 		{
 			//if (!((new File("patientsFile.txt")).exists()))
-			out.printf("patient name    /patient ssn       /appointment date /with doctor \n");
+			out.printf("patient name    /patient ssn       /appointment date       /with doctor \n");
 			
 			for (int i=0; i< appointmentsList.size(); i++) {
 				out.println(appointmentsList.get(i));

@@ -1,0 +1,3 @@
+
+Patient name: 1 The Reason: Bran cancer
+Patient name: 1 The Reason: The patient needs to go to bigger hospital

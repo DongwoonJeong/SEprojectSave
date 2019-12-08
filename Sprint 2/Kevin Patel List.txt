@@ -1,1 +1,3 @@
-patient name        /patient ssn         /appointment date    /with doctor 
+patient name    /patient ssn       /appointment date       /with doctor 
+5                   /5              /5              /Kevin Patel
+   
