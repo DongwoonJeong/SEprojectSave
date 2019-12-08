@@ -15,6 +15,7 @@ public class HospitalManagement {
 		//read data from txt files
 		readData(patients,appointments);
 		
+		
 		boolean amty = false;
 		//what do you want to do?
 		while (true) {
