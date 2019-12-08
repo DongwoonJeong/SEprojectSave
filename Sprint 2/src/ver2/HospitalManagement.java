@@ -191,6 +191,7 @@ public class HospitalManagement {
 			
 			for (int i=0; i< appointmentList.size(); i++) {
 				out.println(appointmentList.get(i));
+				
 			}
 		} catch (IOException e) {
 			       //exception handling left as an exercise for the reader
