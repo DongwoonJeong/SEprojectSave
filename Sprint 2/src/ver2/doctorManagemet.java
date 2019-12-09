@@ -15,7 +15,7 @@ public class doctorManagemet {
 
 	private Set<Doctor> doctors;
 
-    
+    //..
 	public static void main(String[] args) throws Exception 
 	{ 
        Scanner input = new  Scanner(System.in);
@@ -51,6 +51,7 @@ public class doctorManagemet {
 
 		while (scan.hasNextLine())
 			System.out.println(scan.nextLine());
+			System.out.println("Patient list");
 		System.out.println();
 		System.out.println("Log in doctor");
 		System.out.println("1. Dongwoon Jeong");
@@ -66,10 +67,14 @@ public class doctorManagemet {
 		if (Option == 1) {
 			System.out.println("Enter a patient name: ");
 			String name = input.next();
+			//File file2 = new File("Dongwoon Jeong List.txt");
+			//Scanner scan2 = new Scanner(file2);
 
+			//while (scan2.hasNextLine())
+			//	System.out.println(scan2.nextLine());
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient"+"\n");
 			System.out.println("Choice - 2 : Do you want to write a prescription"+"\n");
-
+			//System.out.println("Choice - 3 : Check the appointment list");
 			int choice = input.nextInt();
 			if (choice == 1) {
 				System.out.printf("Enter the Diagnosis: ");
@@ -79,7 +84,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -110,7 +115,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 							
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
@@ -147,7 +152,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -177,7 +182,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -213,7 +218,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -244,7 +249,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -279,7 +284,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -309,7 +314,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -345,7 +350,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -376,7 +381,7 @@ public class doctorManagemet {
 				try {
 					BufferedWriter writer = new BufferedWriter(
 
-							new FileWriter( name + ".txt", true));
+							new FileWriter( name + " chart.txt", true));
 					writer.newLine(); // Add new line
 					writer.write(textToAppend);
 					writer.close();
@@ -425,7 +430,17 @@ public class doctorManagemet {
 		if (Option == 3) {
 			System.out.println("The Regular price is charged only");
 			System.out.println(name + " has Bill of $ 45");
+			String textToAppend = "Patient name: " + name + " Total cost: $45";
+			try {
+				BufferedWriter writer = new BufferedWriter(
 
+						new FileWriter("Bill List.txt", true));
+						
+				writer.newLine(); // Add new line
+				writer.write(textToAppend);
+				writer.close();
+			} catch (IOException e) {
+			}
 		}
 		if (Option == 1) {
 			System.out.println("Please pick injury from the below list");
@@ -441,6 +456,17 @@ public class doctorManagemet {
 				System.out.println(name + " has Bill of $ " + sum);
 				System.out.println("The Regular price: 45$");
 				System.out.println("Injury Cost: 500$");
+				String textToAppend = "Patient name: " + name + " Total cost: $" + sum; 
+				try {
+					BufferedWriter writer = new BufferedWriter(
+
+							new FileWriter("Bill List.txt", true));
+							
+					writer.newLine(); // Add new line
+					writer.write(textToAppend);
+					writer.close();
+				} catch (IOException e) {
+				}
 			}
 			if (pick == 2) {
 				System.out.println("Hamstring");
@@ -449,6 +475,17 @@ public class doctorManagemet {
 				System.out.println(name + " has Bill of $ " + sum);
 				System.out.println("The Regular price: 45$");
 				System.out.println("Injury Cost: 600$");
+				String textToAppend = "Patient name: " + name + " Total cost: $" + sum; 
+				try {
+					BufferedWriter writer = new BufferedWriter(
+
+							new FileWriter("Bill List.txt", true));
+							
+					writer.newLine(); // Add new line
+					writer.write(textToAppend);
+					writer.close();
+				} catch (IOException e) {
+				}
 			}
 			if (pick == 3) {
 				System.out.println("Groin Pull");
@@ -457,8 +494,19 @@ public class doctorManagemet {
 				System.out.println(name + " has Bill of $ " + sum);
 				System.out.println("The Regular price: 45$");
 				System.out.println("Injury Cost: 700$");
-			}
+				String textToAppend = "Patient name: " + name + " Total cost: $" + sum; 
+				try {
+					BufferedWriter writer = new BufferedWriter(
 
+							new FileWriter("Bill List.txt", true));
+							
+					writer.newLine(); // Add new line
+					writer.write(textToAppend);
+					writer.close();
+				} catch (IOException e) {
+				}
+			}
+			
 		}
 		if (Option == 2) {
 			System.out.println("Please pick Illness from the below list");
@@ -475,6 +523,17 @@ public class doctorManagemet {
 				System.out.println(name + " has Bill of $ " + sum);
 				System.out.println("The Regular price: 45$");
 				System.out.println("Injury Cost: 100$");
+				String textToAppend = "Patient name: " + name + " Total cost: $" + sum; 
+				try {
+					BufferedWriter writer = new BufferedWriter(
+
+							new FileWriter("Bill List.txt", true));
+							
+					writer.newLine(); // Add new line
+					writer.write(textToAppend);
+					writer.close();
+				} catch (IOException e) {
+				}
 			}
 			if (pick == 2) {
 				System.out.println("Sore Throat");
@@ -483,6 +542,17 @@ public class doctorManagemet {
 				System.out.println(name + " has Bill of $ " + sum);
 				System.out.println("The Regular price: 45$");
 				System.out.println("Injury Cost: 55$");
+				String textToAppend = "Patient name: " + name + " Total cost: $" + sum; 
+				try {
+					BufferedWriter writer = new BufferedWriter(
+
+							new FileWriter("Bill List.txt", true));
+							
+					writer.newLine(); // Add new line
+					writer.write(textToAppend);
+					writer.close();
+				} catch (IOException e) {
+				}
 			}
 			if (pick == 3) {
 				System.out.println("Cough");
@@ -491,6 +561,17 @@ public class doctorManagemet {
 				System.out.println(name + " has Bill of $ " + sum);
 				System.out.println("The Regular price: 45$");
 				System.out.println("Injury Cost: 85$");
+				String textToAppend = "Patient name: " + name + " Total cost: $" + sum; 
+				try {
+					BufferedWriter writer = new BufferedWriter(
+
+							new FileWriter("Bill List.txt", true));
+							
+					writer.newLine(); // Add new line
+					writer.write(textToAppend);
+					writer.close();
+				} catch (IOException e) {
+				}
 			}
 			if (pick == 4) {
 				System.out.println("Ear Pain");
@@ -499,6 +580,17 @@ public class doctorManagemet {
 				System.out.println(name + " has Bill of $ " + sum);
 				System.out.println("The Regular price: 45$");
 				System.out.println("Injury Cost: 155$");
+				String textToAppend = "Patient name: " + name + " Total cost: $" + sum; 
+				try {
+					BufferedWriter writer = new BufferedWriter(
+
+							new FileWriter("Bill List.txt", true));
+							
+					writer.newLine(); // Add new line
+					writer.write(textToAppend);
+					writer.close();
+				} catch (IOException e) {
+				}
 			}
 
 		}

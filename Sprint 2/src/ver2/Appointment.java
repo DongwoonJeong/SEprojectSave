@@ -1,7 +1,7 @@
 package ver2;
 
 public class Appointment {
-	
+	//..
 	private long appointmentId;
 	private String appointmentDate;
 	private Patient patient;

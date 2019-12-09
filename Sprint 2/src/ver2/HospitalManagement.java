@@ -6,7 +6,7 @@ import java.util.*;
 import java.io.*;
 
 public class HospitalManagement {
-
+//..
 	public static void main(String[] args) throws Exception{
 		Scanner input = new Scanner(System.in);//Scanner
 		//patients and appointments list
@@ -40,13 +40,10 @@ public class HospitalManagement {
 		if (action == 3)
 			changeAppointmentDate(appointments);
 		if (action == 4) {
-			amty = appointments.isEmpty(); 
-			if (amty == true) {
-            System.out.println("There is no appointment\n"); 
-			}else {
-			System.out.println("patient name     /patient ssn      /appointment date    /with doctor \n");
-			System.out.println(appointments+"\n");
-			}
+			File file = new File("appointmentFile.txt");
+			Scanner scan = new Scanner(file);
+			while (scan.hasNextLine())
+				System.out.println(scan.nextLine());
 		}//break
 		if (action == 5 )
 			break;
@@ -159,7 +156,7 @@ public class HospitalManagement {
 			doctorname = "Kevin Patel";
 		}
 		
-		System.out.println("New Appointment made\n");
+		System.out.println("New Appointment has been made\n");
 		
 		Patient newPatient = new Patient(name, age, gender, appointmentDate,ssn,address,dateOfbirth);
 		Appointment newAppointment = new Appointment(newPatient, appointmentDate, doctorname);
