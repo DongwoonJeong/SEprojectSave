@@ -1,5 +1,0 @@
-patient name     /age  /gender /appointmentDate   /ssn               /address                 /date of birth   
-jay              /29   /M      /M                 /M                 /M                       /20-10-1500      
-hoyong lee       /26   /M      /M                 /M                 /10-20-2014              /56035603        
-newName          /25   /M      /M                 /10-02-1111        /26192619                /nk dr           
-kevin Patel      /18   /M      /02/18/1664        /846466161         /156 west street ga      /0801984         
