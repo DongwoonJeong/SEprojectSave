@@ -1,2 +1,0 @@
-patient name    /patient ssn       /appointment date       /with doctor 
-2                   /2                   /2                   /Hoyong Lee          
