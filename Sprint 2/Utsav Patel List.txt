@@ -1,2 +1,0 @@
-patient name    /patient ssn       /appointment date       /with doctor 
-3                   /3                   /3                   /Utsav Patel         
