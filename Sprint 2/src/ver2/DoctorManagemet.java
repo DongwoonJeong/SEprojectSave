@@ -70,6 +70,7 @@ public class DoctorManagemet {
 		System.out.println("Choose the correct doctor number. ");
 		
 		int Option = input.nextInt();
+		input.nextLine();
 		String doctorname =null;
 		if (Option ==1) {
 			doctorname = "Dongwoon Jeong";
@@ -89,7 +90,7 @@ public class DoctorManagemet {
 		
 		if (Option == 1) {
 			System.out.println("Enter a patient name: ");
-			String name = input.next();
+			String name = input.nextLine();
 			
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient"+"\n");
 			System.out.println("Choice - 2 : Do you want to write a prescription"+"\n");
@@ -185,7 +186,7 @@ public class DoctorManagemet {
 		
 		if (Option == 2) {
 			System.out.println("Enter a patient name: ");
-			String name = input.next();
+			String name = input.nextLine();
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
@@ -280,7 +281,7 @@ public class DoctorManagemet {
 		
 		if (Option == 3) {
 			System.out.println("Enter a patient name: ");
-			String name = input.next();
+			String name = input.nextLine();
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
@@ -375,7 +376,7 @@ public class DoctorManagemet {
 		}
 		if (Option == 4) {
 			System.out.println("Enter a patient name: ");
-			String name = input.next();
+			String name = input.nextLine();
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
@@ -471,7 +472,7 @@ public class DoctorManagemet {
 		
 		if (Option == 5) {
 			System.out.println("Enter a patient name: ");
-			String name = input.next();
+			String name = input.nextLine();
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
