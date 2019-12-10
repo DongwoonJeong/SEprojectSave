@@ -1,2 +1,0 @@
-patient name        /patient ssn         /appointment date    
-hoyong lee          /56035603            /10-20-2014          
