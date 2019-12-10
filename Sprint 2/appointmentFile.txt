@@ -1,0 +1,6 @@
+patient name    /patient ssn       /appointment date       /with doctor    
+1                   /1                   /1                   /Dongwoon Jeong      
+2                   /2                   /2                   /Hoyong Lee          
+3                   /3                   /3                   /Utsav Patel         
+4                   /4                   /4                   /Tarun Patel         
+5                   /5                   /5                   /Kevin Patel         
