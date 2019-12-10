@@ -1,1 +1,3 @@
 patient name    /patient ssn       /appointment date       /with doctor 
+patient name    /patient ssn       /appointment date       /with doctor 
+Bang                /222222222           /01012019            /Kevin Patel         

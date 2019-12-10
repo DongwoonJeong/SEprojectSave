@@ -4,3 +4,5 @@ patient name    /patient ssn       /appointment date       /with doctor
 3                   /3                   /3                   /Utsav Patel         
 4                   /4                   /4                   /Tarun Patel         
 5                   /5                   /5                   /Kevin Patel         
+kay                 /26195603            /10-10-2000          /Hoyong Lee          
+Bang                /222222222           /01012019            /Kevin Patel         

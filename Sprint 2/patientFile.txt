@@ -4,3 +4,5 @@ patient name     /age  /gender /appointmentDate   /ssn               /address   
 3                /3    /3      /3                 /3                 /3                       /3               
 4                /4    /4      /4                 /4                 /4                       /4               
 5                /5    /5      /5                 /5                 /5                       /5               
+kay              /23   /M      /M                 /10-10-2000        /26195603                /lankford dr     
+Bang             /22   /M      /01012019          /222222222         /1611 Boone dr           /19920131        
