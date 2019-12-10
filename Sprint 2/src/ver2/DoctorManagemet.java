@@ -1,11 +1,14 @@
   
 package ver2;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.Set;
 import java.text.SimpleDateFormat;
@@ -15,24 +18,25 @@ public class DoctorManagemet {
 	private Set<Patient> patients;
 
 	private Set<Doctor> doctors;
-
+	Date today = new Date();
     //..
 	public static void main(String[] args) throws Exception 
 	{ 
 		
        Scanner input = new  Scanner(System.in);
        
-	//writeNotesAsInstructed();
+	
        File file = new File("appointmentFile.txt");
 		Scanner scan = new Scanner(file);
 		while (scan.hasNextLine())
 			System.out.println(scan.nextLine());
-			System.out.println("Appointment list");
+			System.out.print("Appointment list");
 		System.out.println();
 		
 		
 		
 		while(true) {
+			
 			System.out.println("\n**************************Welcome Doctor!****************************\n");
 			System.out.println(" what would you like to do ?  \n"
 					 +    " 1. Write notes for patients   \n"
@@ -89,6 +93,7 @@ public class DoctorManagemet {
 			
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient"+"\n");
 			System.out.println("Choice - 2 : Do you want to write a prescription"+"\n");
+			System.out.println("Choide - 3 : Patient diagnosis done\n");
 			int choice = input.nextInt();
 			if (choice == 1) {
 				System.out.printf("Enter the Diagnosis: ");
@@ -147,17 +152,44 @@ public class DoctorManagemet {
 					writer.write(textToAppend);
 					writer.close();
 				} catch (IOException e) {
+				}}else if (choice == 3) {
+					try{
+						File inputFile = new File("Dongwoon Jeong List.txt");
+						File tempFile = new File(inputFile.getAbsolutePath()+".tmp");
+						BufferedReader br = new BufferedReader(new FileReader("Dongwoon Jeong List.txt"));
+						PrintWriter pw = new PrintWriter(tempFile);
+						String line = null;
+					      while ((line = br.readLine()) != null) {
+					        if (!line.trim().contains(name)) {
+					    	  pw.println(line);
+					    	  pw.flush();				
+					        }
+					      }
+					      pw.close();
+					      br.close();
+					      if(!inputFile.delete()) {
+					    	  System.out.println("could not delete file");
+					    	  return;
+					      }
+					      if(!tempFile.renameTo(inputFile)) {
+					    	  System.out.println("could not rename file");
+					      }
+					     
+						} catch (IOException e) {
+							       //exception handling left as an exercise for the reader
+						}
 				}
 
 			}
 
-		}
+		
 		if (Option == 2) {
 			System.out.println("Enter a patient name: ");
 			String name = input.next();
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
+			System.out.println("Choide - 3 : Patient diagnosis done\n");
 
 			int choice = input.nextInt();
 			if (choice == 1) {
@@ -215,17 +247,44 @@ public class DoctorManagemet {
 					writer.write(textToAppend);
 					writer.close();
 				} catch (IOException e) {
+				}}else if (choice == 3) {
+					try{
+						File inputFile = new File("Hoyong Lee List.txt");
+						File tempFile = new File(inputFile.getAbsolutePath()+".tmp");
+						BufferedReader br = new BufferedReader(new FileReader("Hoyong Lee List.txt"));
+						PrintWriter pw = new PrintWriter(tempFile);
+						String line = null;
+					      while ((line = br.readLine()) != null) {
+					        if (!line.trim().contains(name)) {
+					    	  pw.println(line);
+					    	  pw.flush();				
+					        }
+					      }
+					      pw.close();
+					      br.close();
+					      if(!inputFile.delete()) {
+					    	  System.out.println("could not delete file");
+					    	  return;
+					      }
+					      if(!tempFile.renameTo(inputFile)) {
+					    	  System.out.println("could not rename file");
+					      }
+					     
+						} catch (IOException e) {
+							       //exception handling left as an exercise for the reader
+						}
 				}
 
 			}
 
-		}
+		
 		if (Option == 3) {
 			System.out.println("Enter a patient name: ");
 			String name = input.next();
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
+			System.out.println("Choide - 3 : Patient diagnosis done\n");
 
 			int choice = input.nextInt();
 			if (choice == 1) {
@@ -285,6 +344,32 @@ public class DoctorManagemet {
 					writer.close();
 				} catch (IOException e) {
 				}
+			}else if (choice == 3) {
+				try{
+					File inputFile = new File("Utsav Patel List.txt");
+					File tempFile = new File(inputFile.getAbsolutePath()+".tmp");
+					BufferedReader br = new BufferedReader(new FileReader("Utsav Patel List.txt"));
+					PrintWriter pw = new PrintWriter(tempFile);
+					String line = null;
+				      while ((line = br.readLine()) != null) {
+				        if (!line.trim().contains(name)) {
+				    	  pw.println(line);
+				    	  pw.flush();				
+				        }
+				      }
+				      pw.close();
+				      br.close();
+				      if(!inputFile.delete()) {
+				    	  System.out.println("could not delete file");
+				    	  return;
+				      }
+				      if(!tempFile.renameTo(inputFile)) {
+				    	  System.out.println("could not rename file");
+				      }
+				     
+					} catch (IOException e) {
+						       //exception handling left as an exercise for the reader
+					}
 			}
 
 		}
@@ -294,6 +379,7 @@ public class DoctorManagemet {
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
+			System.out.println("Choide - 3 : Patient diagnosis done\n");
 
 			int choice = input.nextInt();
 			if (choice == 1) {
@@ -352,16 +438,44 @@ public class DoctorManagemet {
 					writer.close();
 				} catch (IOException e) {
 				}
+			}else if (choice == 3) {
+					try{
+						File inputFile = new File("Tarun Patel List.txt");
+						File tempFile = new File(inputFile.getAbsolutePath()+".tmp");
+						BufferedReader br = new BufferedReader(new FileReader("Tarun Patel List.txt"));
+						PrintWriter pw = new PrintWriter(tempFile);
+						String line = null;
+					      while ((line = br.readLine()) != null) {
+					        if (!line.trim().contains(name)) {
+					    	  pw.println(line);
+					    	  pw.flush();				
+					        }
+					      }
+					      pw.close();
+					      br.close();
+					      if(!inputFile.delete()) {
+					    	  System.out.println("could not delete file");
+					    	  return;
+					      }
+					      if(!tempFile.renameTo(inputFile)) {
+					    	  System.out.println("could not rename file");
+					      }
+					     
+						} catch (IOException e) {
+							       //exception handling left as an exercise for the reader
+						}
+				}
 
 			}
 
-		}
+		
 		if (Option == 5) {
 			System.out.println("Enter a patient name: ");
 			String name = input.next();
 
 			System.out.println("Choice - 1 : Enter the Diagnosis of the Patient");
 			System.out.println("Choice - 2 : Do you want to write a prescription");
+			System.out.println("Choide - 3 : Patient diagnosis done\n");
 
 			int choice = input.nextInt();
 			if (choice == 1) {
@@ -422,6 +536,32 @@ public class DoctorManagemet {
 				} catch (IOException e) {
 				}
 
+			}else if (choice == 3) {
+				try{
+					File inputFile = new File("Kevin Patel List.txt");
+					File tempFile = new File(inputFile.getAbsolutePath()+".tmp");
+					BufferedReader br = new BufferedReader(new FileReader("Kevin Patel List.txt"));
+					PrintWriter pw = new PrintWriter(tempFile);
+					String line = null;
+				      while ((line = br.readLine()) != null) {
+				        if (!line.trim().contains(name)) {
+				    	  pw.println(line);
+				    	  pw.flush();				
+				        }
+				      }
+				      pw.close();
+				      br.close();
+				      if(!inputFile.delete()) {
+				    	  System.out.println("could not delete file");
+				    	  return;
+				      }
+				      if(!tempFile.renameTo(inputFile)) {
+				    	  System.out.println("could not rename file");
+				      }
+				     
+					} catch (IOException e) {
+						       //exception handling left as an exercise for the reader
+					}
 			}
 
 		} 
