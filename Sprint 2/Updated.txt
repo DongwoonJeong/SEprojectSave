@@ -1,0 +1,9 @@
+
+Patient name: 1 The Reason for the visit: cancer
+Patient name: 1 The Reason for the visit: need to go bigger hospital
+Patient name: 1 The Reason for the visit: dumbbyDongwoon Jeong
+Patient name: 1 The Reason for the visit: stupid by doctor Dongwoon Jeong
+Patient name: 1 The Reason for the visit: dog brain by doctor Dongwoon Jeong
+Patient name: 1 The Reason for the visit: He is drunk by doctor Dongwoon Jeong Date: java.text.SimpleDateFormat@f9e3bac0 Time: java.text.SimpleDateFormat@4615fbc1
+Patient name: 1 The Reason for the visit: aef by doctor Dongwoon JeongMon Dec 09 20:20:39 EST 2019
+Patient name: 1 The Reason for the visit: tttttttttttttttt by doctor Dongwoon Jeong Date: Mon Dec 09 20:22:26 EST 2019
